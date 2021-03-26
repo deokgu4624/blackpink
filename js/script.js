@@ -3,14 +3,16 @@ var redbox = document.getElementById("redbox");
 var title = document.getElementById("title");
 var test = document.getElementsByClassName("test");
 var x = 1;
-
+var s = Boolean(true);
 
 function forward(){
     test[0].style.animationName = "test"+x;
     test[0].style.animationPlayState = "paused";
     setTimeout(running, 1000);
     x+=1;
+    s=false;
     console.log(x);
+    setTimeout(changeboolean, 2000);
 }
 
 function back(){
@@ -18,11 +20,15 @@ function back(){
     test[0].style.animationName = "test"+"-"+x;
     test[0].style.animationPlayState = "paused";
     setTimeout(running, 1000);
-    
+    s=false;
     console.log(x);
+    setTimeout(changeboolean, 2000);
 }
 function running(){
     test[0].style.animationPlayState = "running";
+}
+function changeboolean(){
+    s=true;
 }
 
 $(window).bind('wheel', function(e){
@@ -30,12 +36,16 @@ $(window).bind('wheel', function(e){
         // scroll up
         console.log("스크롤 위로");
         console.log(e);
-        forward();
+        if(x<13 && s==true){
+            forward();
+        }
     }
     else {
         // scroll down
         console.log("스크롤 아래로");
-        back();
+        if(x>1 && s==true){
+            back();
+        }
     }
 });
 // //랜덤 이미지

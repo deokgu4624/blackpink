@@ -341,6 +341,15 @@ body{
     font-size: 2vw;
     position: absolute;
     top: 19vw; left: 50%; transform: translateX(-50%);
+    animation: title 2s both;
+}
+@keyframes title{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
 }
 #modifier{
     color: white;
@@ -358,4 +367,27 @@ body{
     position: absolute;
     top: 28vw;
     left: 50%; transform: translateX(-50%);
+}
+.dot{
+    background-color: white;
+    width: 0.3vw; height: 0.3vw;
+    border-radius: 100%;
+    position: absolute;
+    top: 2vw; left: 50%; transform: translateX(-50%);
+}
+#dunkirk{
+    color: white;
+    text-shadow: 10px 10px 20px black;
+    font-family: "lemonmilk";
+    font-size: 1vw;
+    position: absolute;
+    top: 22vw; left: 42.5vw;
+}
+#dynamo{
+    color: white;
+    text-shadow: 10px 10px 20px black;
+    font-family: "roboto";
+    font-size: 1vw;
+    position: absolute;
+    top: 25vw; left: 42.5vw;
 }
