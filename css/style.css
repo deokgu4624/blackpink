@@ -40,3 +40,47 @@ input[type=number]{-moz-appearance:textfield}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 fieldset{border:none}
 
+body{
+    background-color: #f5a6b9;
+}
+#wrapper{
+    width: 14vw; height: 28vw;
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -75%);
+    overflow: hidden;
+}
+#pinkbox{
+    background-color: #f5a6b9;
+    width: 14vw; height: 14vw;
+    position: absolute;
+    top: 50%; left: 0%;
+    box-shadow: -1px -1px 10px #fab0c1;
+    overflow: hidden;
+}
+#blackbox{
+    background-color: black;
+    width: 40vw; height: 40vw;
+    position: absolute;
+    top: 77%; left: 43%;
+    transform: rotate(45deg);
+    box-shadow: -10px -10px 20px rgb(134, 98, 106);
+    transition: top 2s, left 2s, transform 2s;
+}
+#pinkbox2{
+    background-color: #ffc7d4;
+    width: 14vw; height: 20vw;
+    position: absolute;
+    top: 90%; left: 80%;
+    box-shadow: -2px -2px 100px rgb(185, 97, 116);
+    transition: top 2s, left 2s, transform 2s .2s;
+
+}
+#wrapper:hover>#pinkbox2{
+    top: 0%; left: 0;
+    transform: rotate(90deg);
+    transform-origin: 40% 50%;
+}
+#wrapper:hover>#blackbox{
+    top: 50%; left: 0;
+    transform: rotate(90deg);
+}
