@@ -193,12 +193,19 @@ body{
     top: 0vw;
     left: 50%; transform: translateX(-50%);
 }
-img{
+#logo3{
+    position: absolute;
+    z-index: 1;
+    width: 54vw;
+    top: 11vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#mainimg{
     position: absolute;
     z-index: 1;
     width: 143vh;
-    top: 5vw;
+    top: 16vw;
     left: 50%; transform: translateX(-50%);
-    opacity: 0;
-    display: none;
+    opacity: 100%;
 }

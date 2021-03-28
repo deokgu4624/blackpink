@@ -1,6 +1,7 @@
 var box = gsap.to("#blackbox2", {scale:15,ease:"bounce.inOut",duration: 3});
 box.pause();
 $("#blackbox2").css("display", "none");
+$("#mainimg").css("display", "none");
 
 var x=0;
 function delay(){
@@ -9,7 +10,9 @@ function delay(){
     if(x==12){
         clearInterval(timeid);
         $("#blackbox2").css("display", "block");
+        $("#mainimg").css("display", "block");
         box.play();
+        
     }
 }
 function time(){
