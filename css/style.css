@@ -42,45 +42,102 @@ fieldset{border:none}
 
 body{
     background-color: #f5a6b9;
+    overflow: hidden;
+}
+#container{
+    width: 14vw; height: 14vw;
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
 #wrapper{
-    width: 14vw; height: 28vw;
+    width: 14vw; height: 14vw;
     position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -75%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#wrapper2{
+    width: 35vw; height: 35vw;
+    position: absolute;
+    top: 50.5%; left: 50.5%; transform: translate(-29.3%, -38.4%) rotate(45deg);
+    transition: transform 2s;
+    transform-origin: top right;
+    overflow: hidden;
+
+}
+#wrapper3{
+    width: 35vw; height: 35vw;
+    position: absolute;
+    top: 51%; left: 50%; transform: translate(-29.3%, -38.4%) rotate(45deg);
+    transition: transform 2s;
+    transform-origin: top right;
+}
+#wrapper4{
+    width: 14vw;
+    height: 29vw;
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#wrapper5{
+    width: 35vw;
+    height: 35vw;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-29.3%, -38.4%) rotate(45deg);
+    transition: transform 2s;
+    transform-origin: top right;
+    overflow: hidden;
+}
+#shadow{
+    background-color: black;
+    width: 4vw;
+    height: 35vw;
+    position: absolute;
+    top: 0%;
+    left: 103%;
+    box-shadow: -24px -1px 19px #aa6e7d;
     overflow: hidden;
 }
 #pinkbox{
     background-color: #f5a6b9;
     width: 14vw; height: 14vw;
     position: absolute;
-    top: 50%; left: 0%;
+    top: 0%; left: 0%;
     box-shadow: -1px -1px 10px #fab0c1;
     overflow: hidden;
 }
 #blackbox{
     background-color: black;
-    width: 40vw; height: 40vw;
+    width: 35vw; height: 60vw;
     position: absolute;
-    top: 77%; left: 43%;
-    transform: rotate(45deg);
-    box-shadow: -10px -10px 20px rgb(134, 98, 106);
-    transition: top 2s, left 2s, transform 2s;
+    top: 28.5%;
+    left: 100%;
+    box-shadow: -54px -54px 51px rgb(229 133 154);
 }
 #pinkbox2{
     background-color: #ffc7d4;
-    width: 14vw; height: 20vw;
+    width: 14vw; height: 14vw;
     position: absolute;
-    top: 90%; left: 80%;
-    box-shadow: -2px -2px 100px rgb(185, 97, 116);
-    transition: top 2s, left 2s, transform 2s .2s;
+    top: 27vw;
+    left: 39vw;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    transition: transform 2s;
 
 }
-#wrapper:hover>#pinkbox2{
-    top: 0%; left: 0;
-    transform: rotate(90deg);
-    transform-origin: 40% 50%;
+#container:hover #pinkbox2{
+    transform: translate(-115%, -19%)  rotate(90deg);
 }
-#wrapper:hover>#blackbox{
-    top: 50%; left: 0;
-    transform: rotate(90deg);
+#container:hover #wrapper2{
+    top: 50.5%; left: 50.5%; transform: translate(-51.3%, -20.4%) rotate(90deg);
+}
+#container:hover #wrapper3{
+    top: 51%; left: 50%; transform: translate(-51.3%, -20.4%) rotate(90deg);
+}
+#container:hover #wrapper5{
+    top: 76%;
+    left: 50%; transform: translate(-51.3%, -20.4%) rotate(90deg);
 }
