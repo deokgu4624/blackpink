@@ -126,13 +126,12 @@ body{
     transform: rotate(45deg);
     transform-origin: top right;
     transition: transform 2s;
-
 }
 #logo{
     width: 71%;
     position: absolute;
     top: 17vw;
-    left: 2vw;
+    left: 50%; transform: translateX(-50%);
 }
 #container:hover #pinkbox2{
     transform: translate(-115%, -19%)  rotate(90deg);
@@ -146,4 +145,60 @@ body{
 #container:hover #wrapper5{
     top: 76%;
     left: 50%; transform: translate(-51.3%, -20.4%) rotate(90deg);
+}
+
+
+
+#blackbox2{
+    background-color: black;
+    width: 8vw;
+    height: 8vw;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: absolute;
+}
+#block{
+    width: 72vw;
+    height: 35vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    position: absolute;
+}
+#block2{
+    width: 41vw;
+    height: 41vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-117%, -54%) rotate(90deg);
+    position: absolute;
+}
+#block3{
+    width: 41vw;
+    height: 14vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-16%, -54%) rotate(90deg);
+    position: absolute;
+}
+#block4{
+    width: 41vw;
+    height: 14vw;
+    top: 50%; left: 50%; transform: translate(-50%, 49%);
+    position: absolute;
+}
+#logo2{
+    position: absolute;
+    z-index: 1;
+    width: 10vw;
+    top: 0vw;
+    left: 50%; transform: translateX(-50%);
+}
+img{
+    position: absolute;
+    z-index: 1;
+    width: 143vh;
+    top: 5vw;
+    left: 50%; transform: translateX(-50%);
+    opacity: 0;
+    display: none;
 }
