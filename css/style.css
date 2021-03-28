@@ -128,6 +128,12 @@ body{
     transition: transform 2s;
 
 }
+#logo{
+    width: 71%;
+    position: absolute;
+    top: 17vw;
+    left: 2vw;
+}
 #container:hover #pinkbox2{
     transform: translate(-115%, -19%)  rotate(90deg);
 }
