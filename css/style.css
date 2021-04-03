@@ -39,11 +39,22 @@ input{-webkit-appearance:none;border-radius:0;font-family:'Montserrat',Apple SD 
 input[type=number]{-moz-appearance:textfield}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 fieldset{border:none}
-
+@font-face{
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: "coachella";
+    src: url(../fonts/MADE\ Coachella\ Light\ PERSONAL\ USE.otf);
+}
 body{
     background-color: #f5a6b9;
     overflow-x: hidden;
-    overflow-y: scroll;
+    -ms-overflow-style: none;
+    font-family: "roboto";
+} ::-webkit-scrollbar { display: none;
+
+    
 }
 #container{
     width: 14vw; height: 14vw;
@@ -209,4 +220,35 @@ body{
     top: 16vw;
     left: 50%; transform: translateX(-50%);
     opacity: 100%;
+}
+#article{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    top: 60vw;
+    width: 54vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#star{
+    position: absolute;
+    z-index: 1;
+    width: 4vw;
+    top: 24vw;
+    left: 50%;
+    transform: translateX(-50%);
+    fill: #f5a6b9;
+}
+#star2{
+    position: absolute;
+    z-index: 1;
+    width: 4vw;
+    top: 31vw;
+    left: 30%;
+    fill: #f5a6b9;
+}
+h3{
+    font-family: "coachella";
+    color: #f5a6b9;
+    font-size: 3vw;
 }
