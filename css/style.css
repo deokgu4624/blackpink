@@ -41,11 +41,15 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 fieldset{border:none}
 @font-face{
     font-family: "roboto";
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url(../fonts/Roboto-Italic.ttf);
 }
 @font-face{
     font-family: "coachella";
     src: url(../fonts/MADE\ Coachella\ Light\ PERSONAL\ USE.otf);
+}
+@font-face{
+    font-family: "primetime";
+    src: url(../fonts/PRIMETIME\ _PERSONAL\ USE\ ONLY.ttf);
 }
 body{
     background-color: #f5a6b9;
@@ -225,10 +229,13 @@ body{
     position: absolute;
     color: rgb(255, 255, 255);
     z-index: 1;
-    top: 60vw;
+    top: 64vw;
     width: 54vw;
     left: 50%;
     transform: translateX(-50%);
+}
+#article2{
+    margin-top: 1vw;
 }
 #star{
     position: absolute;
@@ -251,4 +258,76 @@ h3{
     font-family: "coachella";
     color: #f5a6b9;
     font-size: 3vw;
+}
+#time1{
+    font-family: "coachella";
+    color: #f5a6b9;
+    font-size: 2vw;
+    position: absolute;
+    z-index: 1;
+    top: 20vw;
+    left: 25%;
+}
+#time2{
+    font-family: "coachella";
+    color: #f5a6b9;
+    font-size: 2vw;
+    position: absolute;
+    z-index: 1;
+    top: 20vw;
+    left: 56%;
+}
+p{
+    line-height: 1.7em;
+}
+#rose{
+    margin-top: 1vw;
+}
+#lsgcover{
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+}
+#area{
+    position: absolute;
+    font-family: "primetime";
+    color: #f5a6b9;
+    font-size: 1vw;
+    z-index: 1;
+    top: 52vw;
+    left: 50%; transform: translateX(-50%);
+    letter-spacing: 0.5em;
+}
+#lp{
+    width: 59%;
+    position: relative;
+    z-index: 1;
+    top: -2vw;
+    left: 11vw;
+}
+#albumbox{
+    position: relative;
+    z-index: 1;
+    width: 26.6vw;
+    height: 26.6vw;
+    top: -31.9vw;
+    left: 13.3vw;
+}
+#album{
+    font-size: 1vw;
+    font-family: "coachella";
+    color: #f5a6b9;
+    position: absolute;
+    z-index: 1;
+    top: 41%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#logo4{
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    top: 37%;
+    left: 50%;
+    transform: translateX(-50%);
 }
