@@ -3,7 +3,7 @@ box.pause();
 $("#blackbox2").css("display", "none");
 $("#mainimg").css("display", "none");
 $("#logo2").css("display", "none");
-$("#logo3").css("display", "none");
+$("#title").css("display", "none");
 $("#article").css("display", "none");
 $("#article").css("display", "none");
 $("#star").css("display", "none");
@@ -24,7 +24,7 @@ function delay(){
         $("#blackbox2").css("display", "block");
         $("#mainimg").css("display", "block");
         $("#logo2").css("display", "block");
-        $("#logo3").css("display", "block");
+        $("#title").css("display", "block");
         $("#article").css("display", "block");
         $("#star").css("display", "block");
         $("#star2").css("display", "block");
@@ -34,7 +34,7 @@ function delay(){
         $("#area").css("display", "block");
 
         gsap.fromTo("#logo2",{autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 2});
-        gsap.fromTo("#logo3",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
+        gsap.fromTo("#title",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
         gsap.fromTo("#mainimg",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
         gsap.fromTo("#article",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
         gsap.fromTo("#star",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 3, repeat: -1, repeatDelay: 6});
@@ -45,7 +45,7 @@ function delay(){
         gsap.fromTo("#rose",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
         gsap.fromTo("#time1",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
         gsap.fromTo("#time2",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
-        gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 2, delay: 2, repeat: -1});
+        gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 6, delay: 2, repeat: -1});
         gsap.fromTo("#area",{autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 2});
         box.play();
         
