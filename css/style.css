@@ -378,15 +378,45 @@ p{
 ul{
     position: relative;
 }
-#list1{
+/* #list1{
 
-}
+} */
 #list2{
-    top: -11vw;
+    top: -12vw;
     left: 50%;
 }
 li{
+    display: inline;
     font-family: "primetime";
     color: #f5a6b9;
     font-size: 2vw;
+    cursor: pointer;
+    left: 0vw;
+    position: absolute;
+}
+#player{
+    position: absolute;
+    z-index: 2;
+    top: 35vw;
+    left: 0vw;
+    width: 50%;
+    height: 40%;
+}
+#next{
+    position: absolute;
+    top: 0vw;
+    left: 29vw;
+    width: 20%;
+}
+#play{
+    position: absolute;
+    top: 0.1vw;
+    left: 107%;
+    width: 1.5vw;
+}
+#prev{
+    position: absolute;
+    top: 0vw;
+    left: 1vw;
+    width: 20%;
 }
