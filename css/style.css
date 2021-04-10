@@ -393,6 +393,42 @@ li{
     cursor: pointer;
     left: 0vw;
     position: absolute;
+    z-index: 1;
+}
+#li1{
+    width: 25.5vw;
+}
+#li2{
+    width: 14.5vw;
+    top: 3vw;
+}
+#li3{
+    width: 20.5vw;
+    top: 6vw;
+}
+#li4{
+    width: 21.5vw;
+    top: 9vw;
+}
+#li5{
+    width: 22vw;
+    top: 0vw;
+    left: 50%;
+}
+#li6{
+    width: 23vw;
+    top: 3vw;
+    left: 50%;
+}
+#li7{
+    width: 23vw;
+    top: 6vw;
+    left: 50%;
+}
+#li8{
+    width: 23vw;
+    top: 9vw;
+    left: 50%;
 }
 #player{
     position: absolute;
@@ -408,15 +444,86 @@ li{
     left: 29vw;
     width: 20%;
 }
-#play{
+#playbtn{
+    position: relative;
+}
+.play{
     position: absolute;
-    top: 0.1vw;
-    left: 107%;
     width: 1.5vw;
 }
-#prev{
+#play1{
+    top: 0.6vw;
+    left: 24vw;
+}
+#play2{
+    top: 3.6vw;
+    left: 13vw;
+}
+#play3{
+    top: 6.6vw;
+    left: 19vw;
+}
+#play4{
+    top: 9.6vw;
+    left: 20vw;
+}
+#play5{
+    top: 0.6vw;
+    left: 69vw;
+}
+#play6{
+    top: 3.6vw;
+    left: 70vw;
+}
+#play7{
+    top: 6.6vw;
+    left: 70vw;
+}
+#play8{
+    top: 9.6vw;
+    left: 70vw;
+}
+.pause{
     position: absolute;
-    top: 0vw;
-    left: 1vw;
-    width: 20%;
+    width: 1.5vw;
+}
+#pause1{
+    top: 0.6vw;
+    left: 24vw;
+}
+#pause2{
+    top: 3.6vw;
+    left: 13vw;
+}
+#pause3{
+    top: 6.6vw;
+    left: 19vw;
+}
+#pause4{
+    top: 9.6vw;
+    left: 20vw;
+}
+#pause5{
+    top: 0.6vw;
+    left: 69vw;
+}
+#pause6{
+    top: 3.6vw;
+    left: 70vw;
+}
+#pause7{
+    top: 6.6vw;
+    left: 70vw;
+}
+#pause8{
+    top: 9.6vw;
+    left: 70vw;
+}
+#about{
+    position: relative;
+    font-family: "primetime";
+    color: #f5a6b9;
+    font-size: 4vw;
+    margin-top: 34vw;
+    left: 50%;
 }
