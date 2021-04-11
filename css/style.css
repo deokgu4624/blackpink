@@ -51,9 +51,12 @@ fieldset{border:none}
     font-family: "primetime";
     src: url(../fonts/PRIMETIME\ _PERSONAL\ USE\ ONLY.ttf);
 }
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: #f5a6b9;
-
+    overflow-x: hidden;
     -ms-overflow-style: none;
     font-family: "roboto";
 } ::-webkit-scrollbar { display: none;
