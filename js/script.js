@@ -1,6 +1,10 @@
 $(document).ready(function(){
     var box = gsap.to("#blackbox2", {scale:15,ease:"bounce.inOut",duration: 3});
+    var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 4, repeat: -1});
+    var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 0.5});
     box.pause();
+    rolling.pause();
+    movelp.pause();
     $("#blackbox2").css("display", "none");
     $("#mainimg").css("display", "none");
     $("#logo2").css("display", "none");
@@ -42,7 +46,6 @@ $(document).ready(function(){
             gsap.fromTo("#star2",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 4, repeat: -1, repeatDelay: 6});
             gsap.fromTo("#star2",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 6, repeat: -1, repeatDelay: 6});
             gsap.to("body", {backgroundColor: "black", delay: 2});
-            gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 6, delay: 2, repeat: -1});
             gsap.fromTo("#area",{autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 2});
             box.play();
         }
@@ -62,18 +65,16 @@ $(document).ready(function(){
         x=0;
     });
     
-    var toggle1 = true;
-    var toggle2 = true;
-    var toggle3 = true;
-    var y =0;
+    var _this;
+    var check=0;
+
     $(".play").css("display", "none");
     $(".pause").css("display", "none");
 
     $("li").on("mouseenter", showplaybtn);
     $("li").on("mouseleave", removeplaybtn);
-    $("li").on("click", changemusic);
+    //$("li").on("click", changemusic);
     $("li").on("click", playtopause);
-    $("li").on("click", showpausebtn);
     
 
     function showplaybtn(){
@@ -90,44 +91,51 @@ $(document).ready(function(){
     function playtopause(){
         var num = $(this).index()+1;
         $("#play" + num).css("display", "none");
-        $(this).off("mouseenter");
-        $("li").not(this).on("mouseenter", showplaybtn);
-        y= y+1;
-        console.log(y);
-    }
-    
-    function showpausebtn(){
-        var num = $(this).index()+1;
         $("#pause"+num).css("display", "block");
         gsap.fromTo("#pause"+num,{scale:0}, {scale: 1, ease:"Bounce.easeOut", duration: 0.5, delay: 0});
-        $("#pause1, #pause2, #pause3, #pause4, #pause5, #pause6, #pause7, #pause8").not("#pause"+num).css("display", "none");
+        $(".pause").not("#pause"+num).css("display", "none");
+        $(".play").not("#play"+num).css("display", "none");
+        $(this).off("mouseenter");
+        $(this).off("mouseleave");
+        $("li").not(this).on("mouseenter", showplaybtn);
+        $("li").not(this).on("mouseleave", removeplaybtn);
+        rolling.play();
+        movelp.play();
+        //트랙 제어
+        if(num==1){track1.play();track2.load();track3.load();track4.load();track5.load();track6.load();track7.load();track8.load()}else if(num==2){track1.load();track2.play();track3.load();track4.load();track5.load();track6.load();track7.load();track8.load()}else if(num==3){track1.load();track2.load();track3.play();track4.load();track5.load();track6.load();track7.load();track8.load()}else if(num==4){track1.load();track2.load();track3.load();track4.play();track5.load();track6.load();track7.load();track8.load()}else if(num==5){track1.load();track2.load();track3.load();track4.load();track5.play();track6.load();track7.load();track8.load()}else if(num==6){track1.load();track2.load();track3.load();track4.load();track5.load();track6.play();track7.load();track8.load()}else if(num==7){track1.load();track2.load();track3.load();track4.load();track5.load();track6.load();track7.play();track8.load()}else if(num==8){track1.load();track2.load();track3.load();track4.load();track5.load();track6.load();track7.load();track8.play()}
+        if(_this == this){
+            console.log("clickagianfuck");
+            check++;
+            console.log(check);
+            rolling.pause();
+            if(num==1){track1.pause()}else if(num==2){track2.pause()}else if(num==3){track3.pause()}else if(num==4){track4.pause()}else if(num==5){track5.pause()}else if(num==6){track6.pause()}else if(num==7){track7.pause()}else if(num==8){track8.pause()}
+            if(check%2==0){
+                $("#pause"+num).css("display", "block");
+                $("#play"+num).css("display", "none");
+                gsap.fromTo("#pause"+num,{scale:0}, {scale: 1, ease:"Bounce.easeOut", duration: 0.5, delay: 0});
+                rolling.play();
+                if(num==1){track1.play()}else if(num==2){track2.play()}else if(num==3){track3.play()}else if(num==4){track4.play()}else if(num==5){track5.play()}else if(num==6){track6.play()}else if(num==7){track7.play()}else if(num==8){track8.play()}
+            }else{
+                $("#pause"+num).css("display", "none");
+                $("#play"+num).css("display", "block");
+                gsap.fromTo("#play"+num,{scale:0}, {scale: 1, ease:"Bounce.easeOut", duration: 0.5, delay: 0});
+                rolling.pause();
+                if(num==1){track1.pause()}else if(num==2){track2.pause()}else if(num==3){track3.pause()}else if(num==4){track4.pause()}else if(num==5){track5.pause()}else if(num==6){track6.pause()}else if(num==7){track7.pause()}else if(num==8){track8.pause()}
+            }
+        }else{
+            check=0;
+            
+        }
+        _this = this;
     }
-
-    function changemusic(){
-        var num = $(this).index()+1;
-        console.log(this);
-        
-        if(toggle1 && num == 2){
-            $("body").append("<audio id='music2' autoplay src='./music/icecream.mp3'></audio>");
-            $("#music1, #music2, #music3, #music4, #music5, #music6, #music7, #music8").not("#music"+num).remove();
-            toggle1 = false;
-            toggle2 = true;
-            toggle3 = true;
-        }
-        if(toggle2 && num == 5){
-            $("body").append("<audio id='music5' autoplay src='./music/lovesickgirls.mp3'></audio>");
-            $("#music1, #music2, #music3, #music4, #music5, #music6, #music7, #music8").not("#music"+num).remove();
-            toggle1 = true;
-            toggle2 = false;
-            toggle3 = true;
-        }
-        if(toggle3 && num == 8){
-            $("body").append("<audio id='music8' autoplay src='./music/youneverknow.mp3'></audio>");
-            $("#music1, #music2, #music3, #music4, #music5, #music6, #music7, #music8").not("#music"+num).remove();
-            toggle1 = true;
-            toggle2 = true;
-            toggle3 = false;
-        }
-    }
+    var track1 = new Audio("./music/howyoulikethat.mp3")
+    var track2 = new Audio("./music/icecream.mp3")
+    var track3 = new Audio("./music/prettysavage.mp3")
+    var track4 = new Audio("./music/betyouwanna.mp3")
+    var track5 = new Audio("./music/lovesickgirls.mp3")
+    var track6 = new Audio("./music/crazyoveryou.mp3")
+    var track7 = new Audio("./music/lovetohateme.mp3")
+    var track8 = new Audio("./music/youneverknow.mp3")
+    track1.loop=true;track2.loop=true;track3.loop=true;track4.loop=true;track5.loop=true;track6.loop=true;track7.loop=true;track8.loop=true;
 });
 
