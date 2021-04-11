@@ -53,7 +53,7 @@ fieldset{border:none}
 }
 body{
     background-color: #f5a6b9;
-    overflow-x: hidden;
+
     -ms-overflow-style: none;
     font-family: "roboto";
 } ::-webkit-scrollbar { display: none;
@@ -233,6 +233,7 @@ body{
     width: 97vw;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 #article2{
     position: relative;
