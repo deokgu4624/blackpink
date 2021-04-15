@@ -328,7 +328,7 @@ p{
     font-family: "primetime";
     color: #f5a6b9;
     font-size: 1vw;
-    z-index: 1;
+    z-index: 2;
     top: 52vw;
     left: 50%; transform: translateX(-50%);
     letter-spacing: 0.5em;
@@ -377,6 +377,7 @@ p{
 #cover{
     position: relative;
     width: 78vw;
+    margin-top: 5vw;
 }
 ul{
     position: relative;
@@ -433,4 +434,11 @@ li{
     font-size: 4vw;
     margin-top: 34vw;
     left: 0;
+}
+#rose{
+    position: absolute;
+    z-index: 1;
+    width: 52%;
+    left: 24vw;
+    top: 26vw;
 }

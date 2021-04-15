@@ -137,5 +137,6 @@ $(document).ready(function(){
     var track7 = new Audio("./music/lovetohateme.mp3")
     var track8 = new Audio("./music/youneverknow.mp3")
     track1.loop=true;track2.loop=true;track3.loop=true;track4.loop=true;track5.loop=true;track6.loop=true;track7.loop=true;track8.loop=true;
+    track1.volume=0.2;track2.volume=0.2;track3.volume=0.2;track4.volume=0.2;track5.volume=0.2;track6.volume=0.2;track7.volume=0.2;track8.volume=0.2;
 });
 
