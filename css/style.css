@@ -219,14 +219,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-#mainimg{
-    position: absolute;
-    z-index: 1;
-    width: 72vw;
-    top: 16vw;
-    left: 50%; transform: translateX(-50%);
-    opacity: 100%;
-}
 #article{
     position: absolute;
     color: rgb(255, 255, 255);
@@ -327,11 +319,13 @@ p{
     position: absolute;
     font-family: "primetime";
     color: #f5a6b9;
-    font-size: 1vw;
+    font-size: 3vw;
     z-index: 2;
-    top: 52vw;
+    top: 51.28vw;
     left: 50%; transform: translateX(-50%);
     letter-spacing: 0.5em;
+    width: 100%;
+    text-align: center;
 }
 #lp{
     width: 59%;
@@ -435,10 +429,10 @@ li{
     margin-top: 34vw;
     left: 0;
 }
-#rose{
+#mainimg{
     position: absolute;
     z-index: 1;
     width: 52%;
-    left: 24vw;
+    left: 50%; transform: translateX(-50%);
     top: 29vw;
 }

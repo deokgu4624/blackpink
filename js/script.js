@@ -41,10 +41,10 @@ $(document).ready(function(){
             gsap.fromTo("#title",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
             gsap.fromTo("#mainimg",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
             gsap.fromTo("#article",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
-            gsap.fromTo("#star",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 3, repeat: -1, repeatDelay: 6});
-            gsap.fromTo("#star",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 5, repeat: -1, repeatDelay: 6});
-            gsap.fromTo("#star2",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 4, repeat: -1, repeatDelay: 6});
-            gsap.fromTo("#star2",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 6, repeat: -1, repeatDelay: 6});
+            // gsap.fromTo("#star",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 3, repeat: -1, repeatDelay: 6});
+            // gsap.fromTo("#star",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 5, repeat: -1, repeatDelay: 6});
+            // gsap.fromTo("#star2",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 4, repeat: -1, repeatDelay: 6});
+            // gsap.fromTo("#star2",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 6, repeat: -1, repeatDelay: 6});
             gsap.to("body", {backgroundColor: "black", delay: 2});
             gsap.fromTo("#area",{autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 2});
             box.play();
