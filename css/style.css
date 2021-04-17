@@ -272,7 +272,7 @@ body{
     font-family: "primetime";
     color: #f5a6b9;
     font-size: 14vw;
-    top: 5vw;
+    top: 26vw;
     left: 50%; transform: translateX(-50%);
     z-index: 1;
 }
@@ -320,7 +320,7 @@ p{
     color: #f5a6b9;
     font-size: 3vw;
     z-index: 2;
-    top: 51.28vw;
+    top: 44.28vw;
     left: 50%; transform: translateX(-50%);
     letter-spacing: 0.5em;
     width: 100%;
@@ -430,10 +430,17 @@ li{
 }
 #mainimg{
     position: absolute;
-    z-index: 1;
-    width: 80%;
-    left: 50%; transform: translateX(-50%);
-    top: 10vw;
+    z-index: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#mainimg2{
+    position: absolute;
+    z-index: 0;
+    width: 38%;
+    left: 50%;
+    top: 5vw;
 }
 #disclist{
     position: relative;
