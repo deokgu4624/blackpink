@@ -1,69 +1,21 @@
 $(document).ready(function(){
-    var box = gsap.to("#blackbox2", {scale:15,ease:"bounce.inOut",duration: 3});
     var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 4, repeat: -1});
     var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 0.5});
-    box.pause();
     rolling.pause();
     movelp.pause();
-    $("#blackbox2").css("display", "none");
     $("#mainimg").css("display", "none");
     $("#logo2").css("display", "none");
     $("#title").css("display", "none");
     $("#article").css("display", "none");
     $("#article").css("display", "none");
-    $("#star").css("display", "none");
-    $("#star2").css("display", "none");
-    $("#rose").css("display", "none");
-    $("#time1").css("display", "none");
-    $("#time2").css("display", "none");
     $("#area").css("display", "none");
     $("#play").css("display", "none");
+    $("#mainimg").css("display", "block");
+    $("#logo2").css("display", "block");
+    $("#title").css("display", "block");
+    $("#article").css("display", "block");
+    $("#area").css("display", "block");
 
-    var x=0;
-    function delay(){
-        x+=1;
-        console.log(x);
-        if(x==12){
-            clearInterval(timeid);
-            $("#container").off();
-            $("#blackbox2").css("display", "block");
-            $("#mainimg").css("display", "block");
-            $("#logo2").css("display", "block");
-            $("#title").css("display", "block");
-            $("#article").css("display", "block");
-            $("#star").css("display", "block");
-            $("#star2").css("display", "block");
-            $("#rose").css("display", "block");
-            $("#time1").css("display", "block");
-            $("#time2").css("display", "block");
-            $("#area").css("display", "block");
-
-            gsap.fromTo("#title",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
-            gsap.fromTo("#mainimg",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
-            gsap.fromTo("#article",{autoAlpha: 0}, {autoAlpha: 1, top:"+=1"+"vw", duration: 1, delay: 2});
-            // gsap.fromTo("#star",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 3, repeat: -1, repeatDelay: 6});
-            // gsap.fromTo("#star",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 5, repeat: -1, repeatDelay: 6});
-            // gsap.fromTo("#star2",{autoAlpha: 0, scale:0}, {autoAlpha: 1, scale: 1, ease:"bounce.out", duration: 1, delay: 4, repeat: -1, repeatDelay: 6});
-            // gsap.fromTo("#star2",{scale:1}, {scale: 0, ease: "back.in(1.7)", duration: 1, delay: 6, repeat: -1, repeatDelay: 6});
-            gsap.to("body", {backgroundColor: "black", delay: 2});
-            gsap.fromTo("#area",{autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 2});
-            box.play();
-        }
-    }
-    function time(){
-        timeid = setInterval(delay, 100);
-    }
-
-    $("#container").mouseenter(function(){
-        console.log("in");
-        time();
-    });
-
-    $("#container").mouseleave(function(){
-        console.log("out");
-        clearInterval(timeid);
-        x=0;
-    });
     
     var _this;
     var check=0;
@@ -73,7 +25,6 @@ $(document).ready(function(){
 
     $("li").on("mouseenter", showplaybtn);
     $("li").on("mouseleave", removeplaybtn);
-    //$("li").on("click", changemusic);
     $("li").on("click", playtopause);
     
 
@@ -128,14 +79,14 @@ $(document).ready(function(){
         }
         _this = this;
     }
-    var track1 = new Audio("./music/howyoulikethat.mp3")
-    var track2 = new Audio("./music/icecream.mp3")
-    var track3 = new Audio("./music/prettysavage.mp3")
-    var track4 = new Audio("./music/betyouwanna.mp3")
-    var track5 = new Audio("./music/lovesickgirls.mp3")
-    var track6 = new Audio("./music/crazyoveryou.mp3")
-    var track7 = new Audio("./music/lovetohateme.mp3")
-    var track8 = new Audio("./music/youneverknow.mp3")
+    var track1 = new Audio("./music/dynamite.mp3")
+    var track2 = new Audio("./music/makeitright.mp3")
+    var track3 = new Audio("./music/dna.mp3")
+    var track4 = new Audio("./music/lifegoeson.mp3")
+    var track5 = new Audio("./music/mikrokosmos.mp3")
+    var track6 = new Audio("./music/fakelove.mp3")
+    var track7 = new Audio("./music/micdrop.mp3")
+    var track8 = new Audio("./music/untoldtruth.mp3")
     track1.loop=true;track2.loop=true;track3.loop=true;track4.loop=true;track5.loop=true;track6.loop=true;track7.loop=true;track8.loop=true;
     track1.volume=0.2;track2.volume=0.2;track3.volume=0.2;track4.volume=0.2;track5.volume=0.2;track6.volume=0.2;track7.volume=0.2;track8.volume=0.2;
     

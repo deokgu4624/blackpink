@@ -41,7 +41,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 fieldset{border:none}
 @font-face{
     font-family: "roboto";
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url(../fonts/Roboto-Thin.ttf);
 }
 @font-face{
     font-family: "coachella";
@@ -56,167 +56,15 @@ html{
     user-select: none;
 }
 body{
-    background-color: #f5a6b9;
     -ms-overflow-style: none;
     font-family: "roboto";
 } ::-webkit-scrollbar { display: none;
 }
-#container{
-    width: 14vw; height: 14vw;
+#background{
     position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-}
-#wrapper{
-    width: 14vw; height: 14vw;
-    position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-#wrapper2{
-    width: 35vw; height: 35vw;
-    position: absolute;
-    top: 50.5%; left: 50.5%; transform: translate(-29.3%, -38.4%) rotate(45deg);
-    transition: transform 2s;
-    transform-origin: top right;
-    overflow: hidden;
-
-}
-#wrapper3{
-    width: 35vw; height: 35vw;
-    position: absolute;
-    top: 51%; left: 50%; transform: translate(-29.3%, -38.4%) rotate(45deg);
-    transition: transform 2s;
-    transform-origin: top right;
-}
-#wrapper4{
-    width: 14vw;
-    height: 29vw;
-    position: absolute;
-    top: -3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-#wrapper5{
-    width: 35vw;
-    height: 35vw;
-    position: absolute;
-    top: 76%;
-    left: 50%;
-    transform: translate(-29.3%, -38.4%) rotate(45deg);
-    transition: transform 2s;
-    transform-origin: top right;
-    overflow: hidden;
-}
-#shadow{
-    background-color: black;
-    width: 4vw;
-    height: 35vw;
-    position: absolute;
-    top: 0%;
-    left: 103%;
-    box-shadow: -24px -1px 19px #aa6e7d;
-    overflow: hidden;
-}
-#pinkbox{
-    background-color: #f5a6b9;
-    width: 14vw; height: 14vw;
-    position: absolute;
-    top: 0%; left: 0%;
-    box-shadow: -1px -1px 10px #fab0c1;
-    overflow: hidden;
-}
-#blackbox{
-    background-color: black;
-    width: 35vw; height: 60vw;
-    position: absolute;
-    top: 28.5%;
-    left: 100%;
-    box-shadow: -54px -54px 51px rgb(229 133 154);
-}
-#pinkbox2{
-    background-color: #ffc7d4;
-    width: 14vw; height: 14vw;
-    position: absolute;
-    top: 27vw;
-    left: 39vw;
-    transform: rotate(45deg);
-    transform-origin: top right;
-    transition: transform 2s;
-}
-#logo{
-    width: 71%;
-    position: absolute;
-    top: 17vw;
-    left: 50%; transform: translateX(-50%);
-}
-#container:hover #pinkbox2{
-    transform: translate(-115%, -19%)  rotate(90deg);
-}
-#container:hover #wrapper2{
-    top: 50.5%; left: 50.5%; transform: translate(-51.3%, -20.4%) rotate(90deg);
-}
-#container:hover #wrapper3{
-    top: 51%; left: 50%; transform: translate(-51.3%, -20.4%) rotate(90deg);
-}
-#container:hover #wrapper5{
-    top: 76%;
-    left: 50%; transform: translate(-51.3%, -20.4%) rotate(90deg);
-}
-
-
-
-#blackbox2{
-    background-color: black;
-    width: 8vw;
-    height: 8vw;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    position: absolute;
-}
-#block{
-    width: 72vw;
-    height: 35vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -120%);
-    position: absolute;
-}
-#block2{
-    width: 41vw;
-    height: 41vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-117%, -54%) rotate(90deg);
-    position: absolute;
-}
-#block3{
-    width: 41vw;
-    height: 14vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-16%, -54%) rotate(90deg);
-    position: absolute;
-}
-#block4{
-    width: 41vw;
-    height: 14vw;
-    top: 50%; left: 50%; transform: translate(-50%, 49%);
-    position: absolute;
-}
-#logo2{
-    position: absolute;
-    z-index: 1;
-    width: 10vw;
-    top: 3vw;
-    left: 50%; transform: translateX(-50%);
-}
-#logo3{
-    position: absolute;
-    z-index: 1;
-    width: 95vw;
-    top: 4vw;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: 500vw;
+    background-image: linear-gradient(to bottom, #f5a6b9 ,#CDDDEB);
 }
 #article{
     position: absolute;
@@ -228,44 +76,11 @@ body{
     transform: translateX(-50%);
     overflow: hidden;
 }
-#article2{
+#dynamite_1{
     position: relative;
-    margin-top: 13vw;
-    left: 50%;
-    width: 50%;
-}
-#star{
-    position: absolute;
-    z-index: 1;
-    width: 4vw;
-    top: 24vw;
-    left: 50%;
-    transform: translateX(-50%);
-    fill: #f5a6b9;
-}
-#star2{
-    position: absolute;
-    z-index: 1;
-    width: 4vw;
-    top: 31vw;
-    left: 30%;
-    fill: #f5a6b9;
-}
-#star3{
-    position: absolute;
-    z-index: 1;
-    width: 4vw;
-    top: 2.5vw;
-    left: 3vw;
-    fill: #f5a6b9;
-}
-#star4{
-    position: absolute;
-    z-index: 1;
-    width: 4vw;
-    top: 2.5vw;
-    left: 93vw;
-    fill: #f5a6b9;
+    margin-top: 1vw;
+    left: 0%;
+    width: 100%;
 }
 #title{
     position: absolute;
@@ -275,44 +90,6 @@ body{
     top: 26vw;
     left: 50%; transform: translateX(-50%);
     z-index: 1;
-}
-#firstalbum{
-    position: relative;
-    font-family: "primetime";
-    color: #f5a6b9;
-    font-size: 4vw;
-    margin-top: 5vw;
-    left: 50%;
-    width: 50%;
-}
-#time1{
-    font-family: "coachella";
-    color: #f5a6b9;
-    font-size: 2vw;
-    position: absolute;
-    z-index: 1;
-    top: 19vw;
-    left: 6%;
-}
-#time2{
-    font-family: "coachella";
-    color: #f5a6b9;
-    font-size: 2vw;
-    position: absolute;
-    z-index: 1;
-    top: 19vw;
-    left: 76%;
-}
-p{
-    line-height: 1.7em;
-}
-#rose{
-    margin-top: 1vw;
-}
-#lsgcover{
-    width: 50%;
-    position: absolute;
-    z-index: 2;
 }
 #area{
     position: absolute;
@@ -326,10 +103,187 @@ p{
     width: 100%;
     text-align: center;
 }
-#lp{
-    width: 59%;
+#dynamite{
     position: relative;
-    top: -3vw;
+    font-family: "primetime";
+    color: white;
+    font-size: 5vw;
+    margin-top: 3vw;
+    left: 0%;
+    width: 53%;
+}
+#billion{
+    position: relative;
+    font-family: "primetime";
+    color: white;
+    font-size: 5vw;
+    margin-top: 15vw;
+    left: 50%;
+    width: 50%;
+}
+#billion_1{
+    position: relative;
+    font-family: "primetime";
+    color: white;
+    font-size: 11vw;
+    margin-top: -3vw;
+    left: 50%;
+    width: 50%;
+}
+#about{
+    position: relative;
+    font-family: "primetime";
+    color: white;
+    font-size: 5vw;
+    margin-top: 15vw;
+    left: 0%;
+    width: 50%;
+}
+#members{
+    position: relative;
+    margin-top: 10vw;
+    height: 144vw;
+}
+#members_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 21vw;
+    font-size: 5vw;
+    left: 50%; transform: translateX(-50%) rotate(90deg);
+}
+#v{
+    width: 27%;
+    position: absolute;
+    top: 0vw;
+    left: 13%;
+}
+#jimin{
+    width: 37%;
+    position: absolute;
+    top: 11vw;
+    left: 62%;
+}
+#jungkook{
+    width: 41%;
+    position: absolute;
+    top: 39vw;
+    left: 0%;
+}
+#sugar{
+    width: 20%;
+    position: absolute;
+    top: 66vw;
+    left: 62%;
+}
+#jhope{
+    width: 24%;
+    position: absolute;
+    top: 83vw;
+    left: 22%;
+}
+#jin{
+    width: 23%;
+    position: absolute;
+    top: 97vw;
+    left: 64%;
+}
+#rm{
+    width: 32%;
+    position: absolute;
+    top: 116vw;
+    left: 14%;
+}
+#v_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 13.2vw;
+    left: 13%;
+    font-size: 9vw;
+    color: #f5a6b9;
+}
+#jimin_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 35vw;
+    left: 62%;
+    font-size: 7vw;
+    color: #f5a6b9;
+}
+#jungkook_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 61vw;
+    left: 0%;
+    font-size: 8vw;
+    color: #f5a6b9;
+    line-height: 0.8em;
+}
+#sugar_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 79vw;
+    left: 62%;
+    font-size: 3.5vw;
+    color: #f5a6b9;
+}
+#jhope_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 103.7vw;
+    left: 22%;
+    font-size: 4.7vw;
+    color: #f5a6b9;
+}
+#jin_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 106.7vw;
+    left: 64%;
+    font-size: 8.7vw;
+    color: #f5a6b9;
+}
+#rm_1{
+    position: absolute;
+    font-family: "primetime";
+    top: 133.9vw;
+    left: 13.7%;
+    font-size: 8.5vw;
+    color: #f5a6b9;
+}
+p{
+    font-size: 1vw;
+    line-height: 1.7em;
+}
+#playlist{
+    position: relative;
+    font-family: "primetime";
+    color: white;
+    font-size: 7vw;
+    margin-top: 15vw;
+    left: 50%; transform: translateX(-50%);
+    z-index: 0;
+}
+#playlist_1{
+    position: relative;
+    height: 60vw;
+}
+#albumcover{
+    position: relative;
+    margin-top: -4vw;
+    width: 63%;
+    left: 50%;
+    transform: translateX(-25%);
+    z-index: -1;
+}
+#coverimg{
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+}
+#lp{
+    width: 56%;
+    position: absolute;
+    top: -1vw;
     left: 3vw;
 }
 #albumbox{
@@ -345,7 +299,7 @@ p{
     width: 100%;
     text-align: center;
     font-family: "coachella";
-    color: #f5a6b9;
+    color: white;
     position: absolute;
 
     top: 11%;
@@ -359,33 +313,14 @@ p{
     left: 50%;
     transform: translateX(-50%);
 }
-#track{
-    position: relative;
-    font-family: "primetime";
-    color: #f5a6b9;
-    font-size: 4vw;
-    margin-top: 5vw;
-    left: 50%; transform: translateX(-50%);
-}
-#cover{
-    position: relative;
-    width: 78vw;
-    margin-top: 5vw;
-}
+
 ul{
     position: relative;
-}
-/* #list1{
-
-} */
-#list2{
-    top: -12vw;
-    left: 50%;
 }
 li{
     display: inline;
     font-family: "primetime";
-    color: #f5a6b9;
+    color: white;
     font-size: 2vw;
     cursor: pointer;
     left: 0vw;
@@ -411,25 +346,17 @@ li{
     position: relative;
 }
 .play{position:absolute;width:1.5vw}#play1{top:.6vw;left:24vw}#play2{top:3.6vw;left:13vw}#play3{top:6.6vw;left:19vw}#play4{top:9.6vw;left:20vw}#play5{top:.6vw;left:63.5vw}#play6{top:3.6vw;left:65vw}#play7{top:6.6vw;left:65vw}#play8{top:9.6vw;left:65.5vw}.pause{position:absolute;width:1.5vw}#pause1{top:.6vw;left:24vw}#pause2{top:3.6vw;left:13vw}#pause3{top:6.6vw;left:19vw}#pause4{top:9.6vw;left:20vw}#pause5{top:.6vw;left:63.5vw}#pause6{top:3.6vw;left:65vw}#pause7{top:6.6vw;left:65vw}#pause8{top:9.6vw;left:65.5vw}
-#about{
-    position: relative;
-    font-family: "primetime";
-    color: #f5a6b9;
-    font-size: 4vw;
-    margin-top: 34vw;
-    left: 50%;
-    width: 50%;
-}
+
 #discography{
     position: relative;
     font-family: "primetime";
-    color: #f5a6b9;
+    color: white;
     font-size: 4vw;
     margin-top: 34vw;
     left: 0;
 }
 #mainimg{
-    position: absolute;
+    position: relative;
     z-index: 0;
     width: 100%;
     left: 0;
