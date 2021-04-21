@@ -251,8 +251,8 @@ body{
     color: #f5a6b9;
 }
 p{
-    font-size: 1vw;
-    line-height: 1.7em;
+    font-size: 1.3vw;
+    line-height: 1.2em;
 }
 #playlist{
     position: relative;
@@ -288,11 +288,10 @@ p{
 }
 #albumbox{
     position: absolute;
-
-    width: 20.7%;
-    height: 20.7%;
-    top: 38.5%;
-    left: 38.6%;
+    width: 22%;
+    height: 22%;
+    top: 36.5%;
+    left: 35.6%;
 }
 #album{
     font-size: 1.5vw;
@@ -321,31 +320,17 @@ li{
     display: inline;
     font-family: "primetime";
     color: white;
-    font-size: 2vw;
+    font-size: 3.3vw;
     cursor: pointer;
     left: 0vw;
     position: absolute;
     z-index: 1;
 }
-#li1{width:25.5vw}#li2{width:14.5vw;top:3vw}#li3{width:20.5vw;top:6vw}#li4{width:21.5vw;top:9vw}#li5{width:22vw;top:0;left:50%}#li6{width:23vw;top:3vw;left:50%}#li7{width:23vw;top:6vw;left:50%}#li8{width:23vw;top:9vw;left:50%}
-#player{
-    position: absolute;
-    z-index: 2;
-    top: 35vw;
-    left: 0vw;
-    width: 50%;
-    height: 40%;
-}
-#next{
-    position: absolute;
-    top: 0vw;
-    left: 29vw;
-    width: 20%;
-}
+#li1{width:25.5vw;top:33vw}#li2{width:38.5vw;top:38vw}#li3{width:20.5vw;top:43vw}#li4{width:36.5vw;top:48vw}#li5{width:22vw;top:33vw;left:50%}#li6{width:29vw;top:38vw;left:50%}#li7{width:23vw;top:43vw;left:50%}#li8{width:37vw;top:48vw;left:50%}
 #playbtn{
     position: relative;
 }
-.play{position:absolute;width:1.5vw}#play1{top:.6vw;left:24vw}#play2{top:3.6vw;left:13vw}#play3{top:6.6vw;left:19vw}#play4{top:9.6vw;left:20vw}#play5{top:.6vw;left:63.5vw}#play6{top:3.6vw;left:65vw}#play7{top:6.6vw;left:65vw}#play8{top:9.6vw;left:65.5vw}.pause{position:absolute;width:1.5vw}#pause1{top:.6vw;left:24vw}#pause2{top:3.6vw;left:13vw}#pause3{top:6.6vw;left:19vw}#pause4{top:9.6vw;left:20vw}#pause5{top:.6vw;left:63.5vw}#pause6{top:3.6vw;left:65vw}#pause7{top:6.6vw;left:65vw}#pause8{top:9.6vw;left:65.5vw}
+.play{position:absolute;width:2vw}#play1{top:34.3vw;left:21vw}#play2{top:39.3vw;left:30vw;}#play3{top:44.6vw;left:10vw}#play4{top:49.3vw;left:28.5vw}#play5{top:34.3vw;left:73.5vw}#play6{top:39.3vw;left:66vw}#play7{top:44.4vw;left:63.5vw}#play8{top:49.3vw;left:74.5vw}.pause{position:absolute;width:2vw}#pause1{top:34.3vw;left:21vw}#pause2{top:39.3vw;left:30vw;}#pause3{top:44.6vw;left:10vw}#pause4{top:49.3vw;left:28.5vw}#pause5{top:34.3vw;left:73.5vw}#pause6{top:39.3vw;left:66vw}#pause7{top:44.4vw;left:63.5vw}#pause8{top:49.3vw;left:74.5vw}
 
 #discography{
     position: relative;

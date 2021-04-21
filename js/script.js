@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 4, repeat: -1});
+    var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 2, repeat: -1});
     var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 0.5});
     rolling.pause();
     movelp.pause();
