@@ -1,22 +1,59 @@
 $(document).ready(function(){
+    //scroll
+    function noEvent() { // 새로 고침 방지
+        if (event.keyCode == 116) {
+            alert("새로고침을 할 수 없습니다.");
+            event.keyCode = 2;
+            return false;
+        } else if (event.ctrlKey
+                && (event.keyCode == 78 || event.keyCode == 82)) {
+            return false;
+        }
+    }
+document.onkeydown = noEvent;
+
+    var height = $("#background").height();
+    gsap.to("#wrapper",{top: 0, ease:"expo.inOut", duration: 1})
+    var s = Boolean(true);
+    var x = 1;
+    function changeboolean(){
+        s=true;
+    }
+    $(window).bind('wheel', function(e){
+        if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            // scroll up
+            if(x>1 && s==true){
+            console.log("스크롤 위로");
+            console.log(e);
+            gsap.to("#wrapper",{top: "+="+height, ease:"expo.inOut", duration: 1})
+            x-=1;
+            s=false;
+            setTimeout(changeboolean, 1500);
+            console.log(x);
+            }
+        }
+        else {
+            // scroll down
+            if(x<5 && s==true){
+            console.log("스크롤 아래로");
+            gsap.to("#wrapper",{top: "-="+height, ease:"expo.inOut", duration: 1})
+            x+=1;
+            s=false
+            setTimeout(changeboolean, 1500);
+            console.log(x);
+            }
+        }
+    });
+
+    //rollig lp
+
     var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 2, repeat: -1});
     var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 0.5});
     rolling.pause();
     movelp.pause();
-    $("#mainimg").css("display", "none");
-    $("#logo2").css("display", "none");
-    $("#title").css("display", "none");
-    $("#article").css("display", "none");
-    $("#article").css("display", "none");
-    $("#area").css("display", "none");
-    $("#play").css("display", "none");
-    $("#mainimg").css("display", "block");
-    $("#logo2").css("display", "block");
-    $("#title").css("display", "block");
-    $("#article").css("display", "block");
-    $("#area").css("display", "block");
 
-    
+    //playlist
+
     var _this;
     var check=0;
 

@@ -51,53 +51,121 @@ fieldset{border:none}
     font-family: "primetime";
     src: url(../fonts/PRIMETIME\ _PERSONAL\ USE\ ONLY.ttf);
 }
+@font-face{
+    font-family: "notosans";
+    src: url(../fonts/NotoSans-ExtraBold.ttf);
+}
 html{
-    overflow-x: hidden;
+    overflow: hidden;
     user-select: none;
 }
 body{
     -ms-overflow-style: none;
     font-family: "roboto";
-} ::-webkit-scrollbar { display: none;
 }
-#background{
+#wrapper{
     position: absolute;
     width: 100%;
-    height: 500vw;
-    background-image: linear-gradient(to bottom, #f5a6b9 ,#CDDDEB);
+    height: 100vh;
 }
-#article{
+.article{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+#background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #FE688C ,#FFBBA5);
+}
+#article1{
     position: absolute;
     color: rgb(255, 255, 255);
     z-index: 1;
-    top: 64vw;
+    top: 0vw;
     width: 87vw;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
+}
+#article2{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    top: 0vw;
+    width: 87vw;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+#nav{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    color: #FCEDF1;
+    font-family: "primetime";
+    letter-spacing: 0.5em;
+    font-size: 2vw;
+    left: 24%;
+}
+#nav p{
+    display: inline;
 }
 #dynamite_1{
     position: relative;
     margin-top: 1vw;
     left: 0%;
     width: 100%;
+    opacity: 79%;
+}
+#mainimg{
+    width: 100%;
+}
+#main1{
+    opacity: 61%;
+    position: absolute;
+    z-index: 1;
+    top: 4vw;
+    left: 9%;
+    width: 23%;
+}
+#main2{
+    opacity: 70%;
+    position: absolute;
+    z-index: 1;
+    top: 20vw;
+    left: 40%;
+    width: 15%;
+}
+#main3{
+    opacity: 65%;
+    position: absolute;
+    z-index: 1;
+    top: 6vw;
+    left: 69%;
+    width: 20%;
 }
 #title{
     position: absolute;
     font-family: "primetime";
-    color: #f5a6b9;
-    font-size: 14vw;
-    top: 26vw;
+    color: #FEF3F6;
+    font-size: 3vw;
+    top: 22vw;
+    letter-spacing: 0.5em;
     left: 50%; transform: translateX(-50%);
     z-index: 1;
+    width: 100%;
+    text-align: center;
 }
 #area{
     position: absolute;
     font-family: "primetime";
-    color: #f5a6b9;
+    color: #FEF3F6;
     font-size: 3vw;
     z-index: 2;
-    top: 44.28vw;
+    top: 28vw;
     left: 50%; transform: translateX(-50%);
     letter-spacing: 0.5em;
     width: 100%;
@@ -111,6 +179,7 @@ body{
     margin-top: 3vw;
     left: 0%;
     width: 53%;
+    opacity: 79%;
 }
 #billion{
     position: relative;
@@ -120,6 +189,7 @@ body{
     margin-top: 15vw;
     left: 50%;
     width: 50%;
+    opacity: 79%;
 }
 #billion_1{
     position: relative;
@@ -130,19 +200,27 @@ body{
     left: 50%;
     width: 50%;
 }
+#billion_2{
+    position: relative;
+    color: white;
+    opacity: 79%;
+}
 #about{
     position: relative;
     font-family: "primetime";
     color: white;
     font-size: 5vw;
-    margin-top: 15vw;
     left: 0%;
     width: 50%;
+    opacity: 79%;
 }
 #members{
     position: relative;
     margin-top: 10vw;
     height: 144vw;
+}
+#members img{
+    opacity: 80%;
 }
 #members_1{
     position: absolute;
@@ -150,12 +228,16 @@ body{
     top: 21vw;
     font-size: 5vw;
     left: 50%; transform: translateX(-50%) rotate(90deg);
+    opacity: 77%;
 }
 #v{
     width: 27%;
     position: absolute;
     top: 0vw;
     left: 13%;
+}
+#members > #v{
+    opacity: 60%;
 }
 #jimin{
     width: 37%;
@@ -253,11 +335,13 @@ body{
 p{
     font-size: 1.3vw;
     line-height: 1.2em;
+    margin-top: 1vw;
+    color: white;
 }
 #playlist{
     position: relative;
     font-family: "primetime";
-    color: white;
+    color: #F8F5F8;
     font-size: 7vw;
     margin-top: 15vw;
     left: 50%; transform: translateX(-50%);
@@ -319,7 +403,7 @@ ul{
 li{
     display: inline;
     font-family: "primetime";
-    color: white;
+    color: #F8F5F8;
     font-size: 3.3vw;
     cursor: pointer;
     left: 0vw;
@@ -340,24 +424,195 @@ li{
     margin-top: 34vw;
     left: 0;
 }
-#mainimg{
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
-#mainimg2{
-    position: absolute;
-    z-index: 0;
-    width: 38%;
-    left: 50%;
-    top: 5vw;
-}
 #disclist{
     position: relative;
     font-family: "primetime";
     color: #f5a6b9;
     font-size: 10vw;
     left: 0;
+}
+#cardwrapper{
+    position: relative;
+    width: 89%;
+    height: 200vw;
+    left: 50%; transform: translateX(-50%);
+    margin-top: 9vw;
+}
+.photocard{
+    width: 30%;
+    height: 52vw;
+    position: absolute;
+    opacity: 76%;
+}
+.photo{
+    width: 100%;
+}
+#photocard1{
+    top: 0vw;
+    left: 0%;
+}
+
+#photocard2{
+    top: 23vw;
+    left: 35%;
+}
+
+#photocard3{
+    top: 9vw;
+    left: 70%;
+}
+#photocard4{
+    top: 51vw;
+    left: 0%;
+}
+#photocard5{
+    top: 71vw;
+    left: 35%;
+}
+#photocard6{
+    top: 55vw;
+    left: 70%;
+}
+#photocard7{
+    top: 94vw;
+    left: 0%;
+}
+#photocard8{
+    top: 119vw;
+    left: 35%;
+}
+#photocard9{
+    top: 160vw;
+    left: 35%;
+}
+#photocard10{
+    top: 137vw;
+    left: 0%;
+}
+#photocard11{
+    top: 141vw;
+    left: 70%;
+}
+#photocard12{
+    top: 98vw;
+    left: 70%;
+}
+#name1{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 4.5vw;
+    top: 28vw;
+    left: -28.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name2{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 6vw;
+    top: 27vw;
+    left: -27.6vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name3{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 4.5vw;
+    top: 28vw;
+    left: -28.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name4{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 2.5vw;
+    top: 29vw;
+    left: -8.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name5{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 6vw;
+    top: -11vw;
+    left: -10.3vw;
+    transform: rotate(-90deg);
+    width: 61vw;
+}
+#name6{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 6.5vw;
+    top: 26vw;
+    left: -27.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name7{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 7.5vw;
+    top: -2vw;
+    left: 12.4vw;
+    width: 61vw;
+}
+#name8{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 5.7vw;
+    top: 27vw;
+    left: -27.7vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name9{
+    position: absolute;
+    font-family: "notosans";
+    color: white;
+    font-size: 4.5vw;
+    top: 28vw;
+    left: -28.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name10{
+    position: absolute;
+    font-family: "notosans";
+    color: white;
+    font-size: 4.5vw;
+    top: 28vw;
+    left: -28.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name11{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 5.5vw;
+    top: 27vw;
+    left: -27.8vw;
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name12{
+    position: absolute;
+    font-family: "primetime";
+    color: white;
+    font-size: 4.5vw;
+    top: 28vw;
+    left: -28.3vw;
+    transform: rotate(90deg);
+    width: 61vw;
 }
