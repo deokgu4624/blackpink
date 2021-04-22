@@ -1,46 +1,39 @@
 $(document).ready(function(){
     //scroll
-    function noEvent() { // 새로 고침 방지
-        if (event.keyCode == 116) {
-            alert("새로고침을 할 수 없습니다.");
-            event.keyCode = 2;
-            return false;
-        } else if (event.ctrlKey
-                && (event.keyCode == 78 || event.keyCode == 82)) {
-            return false;
-        }
-    }
-document.onkeydown = noEvent;
 
     var height = $("#background").height();
-    gsap.to("#wrapper",{top: 0, ease:"expo.inOut", duration: 1})
     var s = Boolean(true);
     var x = 1;
     function changeboolean(){
         s=true;
     }
+    
+    var article = $(".article");
     $(window).bind('wheel', function(e){
         if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
             // scroll up
             if(x>1 && s==true){
             console.log("스크롤 위로");
             console.log(e);
-            gsap.to("#wrapper",{top: "+="+height, ease:"expo.inOut", duration: 1})
             x-=1;
             s=false;
-            setTimeout(changeboolean, 1500);
+            setTimeout(changeboolean, 400);
             console.log(x);
+            gsap.to(article[x-1], {opacity:1, duration:1})//1
+            gsap.to(article[x], {display: "block", opacity:0, duration:1})
             }
         }
         else {
             // scroll down
             if(x<5 && s==true){
-            console.log("스크롤 아래로");
-            gsap.to("#wrapper",{top: "-="+height, ease:"expo.inOut", duration: 1})
-            x+=1;
-            s=false
-            setTimeout(changeboolean, 1500);
-            console.log(x);
+                console.log("스크롤 아래로");
+                console.log(x);
+                if(x!==3){
+                    x+=1;
+                }
+                
+                gsap.to(article[x-2], {opacity:0, duration:1})//0
+                gsap.to(article[x-1], {display: "block", opacity:1, duration:1})//1
             }
         }
     });
