@@ -7,8 +7,8 @@ $(document).ready(function(){
     gsap.fromTo("#main3",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"65%",ease:"Power3.easeOut", duration:2, delay:.1})
     gsap.fromTo("#title span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.5})
     gsap.fromTo("#area span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.7})
-    gsap.to(".nav",{display: "block", delay:1.1});
-    gsap.fromTo(".nav",{opacity:0}, {opacity:1, duration:.5, delay:1.5})
+    gsap.to(".nav",{display: "block", delay:1.7});
+    gsap.fromTo(".nav",{opacity:0}, {opacity:1, duration:.5, delay:1.7})
 
     
     $("#nav1").on("click", function(){
