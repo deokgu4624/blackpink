@@ -1,47 +1,38 @@
 $(document).ready(function(){
-    //scroll
-
-    var height = $("#background").height();
-    var s = Boolean(true);
-    var x = 1;
-    function changeboolean(){
-        s=true;
-    }
-    
+    //animation
     var article = $(".article");
-    $(window).bind('wheel', function(e){
-        if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-            // scroll up
-            if(x>1 && s==true){
-            console.log("스크롤 위로");
-            console.log(e);
-            x-=1;
-            s=false;
-            setTimeout(changeboolean, 400);
-            console.log(x);
-            gsap.to(article[x-1], {opacity:1, duration:1})//1
-            gsap.to(article[x], {display: "block", opacity:0, duration:1})
-            }
-        }
-        else {
-            // scroll down
-            if(x<5 && s==true){
-                console.log("스크롤 아래로");
-                console.log(x);
-                if(x!==3){
-                    x+=1;
-                }
-                
-                gsap.to(article[x-2], {opacity:0, duration:1})//0
-                gsap.to(article[x-1], {display: "block", opacity:1, duration:1})//1
-            }
-        }
+    gsap.to(article[0],{display: "block"});
+    gsap.fromTo("#main1",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"61%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#main2",{opacity:0, top: "+="+3+"vw"}, {top: "-="+3+"vw", opacity:"70%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#main3",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"65%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#title span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.5})
+    gsap.fromTo("#area span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.7})
+    gsap.to(".nav",{display: "block", delay:1.1});
+    gsap.fromTo(".nav",{opacity:0}, {opacity:1, duration:.5, delay:1.5})
+
+    
+    $("#nav1").on("click", function(){
+        //메인사라짐
+        gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#main2",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#title span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#area span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.7})
+        gsap.fromTo(".nav",{opacity:1}, {opacity:0, duration:.5, delay:1.5})
+        //다이너마이트 생김
+        gsap.to(article[1],{display: "block"});
+        gsap.fromTo("#h3_1 span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:2})
+        gsap.fromTo("#h3_2 span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:2.2})
+        gsap.fromTo("#dynamite_1",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
+        gsap.fromTo("#dynamiterm",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.7})
+        gsap.fromTo("#dynamitev",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.8})
+        gsap.fromTo("#dynamitejin",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.5})
+        gsap.fromTo("#light span",{top: "+="+3.05+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:3.2})
     });
 
     //rollig lp
-
     var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 2, repeat: -1});
-    var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 0.5});
+    var movelp = gsap.to("#lp",{left:"17vw", ease:"Power3.easeOut", duration: 1});
     rolling.pause();
     movelp.pause();
 
