@@ -2,7 +2,7 @@ $(document).ready(function(){
     //animation
     var article = $(".article");
     gsap.to(article[0],{display: "block"});
-    gsap.fromTo("#main1",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"61%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#main1",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"70%",ease:"Power3.easeOut", duration:2, delay:.1})
     gsap.fromTo("#main2",{opacity:0, top: "+="+3+"vw"}, {top: "-="+3+"vw", opacity:"70%",ease:"Power3.easeOut", duration:2, delay:.1})
     gsap.fromTo("#main3",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"65%",ease:"Power3.easeOut", duration:2, delay:.1})
     gsap.fromTo("#title span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.5})
@@ -25,7 +25,7 @@ $(document).ready(function(){
         gsap.fromTo("#h3_2 span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:2.2})
         gsap.fromTo("#dynamite_1",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
         gsap.fromTo("#dynamiterm",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.7})
-        gsap.fromTo("#dynamitev",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.8})
+        gsap.fromTo("#dynamitev",{opacity:0, top: "-="+3+"vw"}, {opacity:"73%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.8})
         gsap.fromTo("#dynamitejin",{opacity:0, top: "-="+3+"vw"}, {opacity:"64%", top:"+="+3+"vw", ease:"Power3.easeOut", duration:2, delay:2.5})
         gsap.fromTo("#light span",{top: "+="+3.05+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:3.2})
     });

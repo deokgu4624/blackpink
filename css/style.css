@@ -67,6 +67,7 @@ html::-webkit-scrollbar{
 body{
     -ms-overflow-style: none;
     font-family: "roboto";
+    color: #FEF3F6;
 }
 #wrapper{
     position: absolute;
@@ -84,11 +85,11 @@ body{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #FE688C ,#FFBBA5);
+    background: rgb(255,181,184);
+background: linear-gradient(45deg, rgba(255,181,184,1) 0%, rgba(229,190,255,1) 50%, rgba(212,235,255,1) 100%);
 }
 #article1{
     position: absolute;
-    color: rgb(255, 255, 255);
     z-index: 1;
     top: 6vw;
     width: 87vw;
@@ -99,7 +100,6 @@ body{
 }
 #article2{
     position: absolute;
-    color: rgb(255, 255, 255);
     z-index: 1;
     top: 0vw;
     width: 87vw;
@@ -109,7 +109,6 @@ body{
 .nav{
     position: fixed;
     font-family: "roboto";
-    color: white;
     font-size: 1.5em;
     margin: 1vw 1vw;
     cursor: pointer;
@@ -169,7 +168,6 @@ body{
 #title{
     position: absolute;
     font-family: "primetime";
-    color: #FEF3F6;
     font-size: 3vw;
     top: 22vw;
     letter-spacing: 0.5em;
@@ -189,7 +187,6 @@ body{
 #area{
     position: absolute;
     font-family: "primetime";
-    color: #FEF3F6;
     font-size: 3vw;
     z-index: 2;
     top: 28vw;
@@ -209,13 +206,11 @@ body{
 #h3_1{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 3vw;
     letter-spacing: 0.5em;
     margin-top: 3vw;
     left: 20%;
     width: 53%;
-    opacity: 79%;
     width: 100%;
     height: 4vw;
     overflow: hidden;
@@ -223,13 +218,11 @@ body{
 #h3_2{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 3vw;
     letter-spacing: 0.5em;
     top: -.5vw;
     left: 20%;
     width: 53%;
-    opacity: 79%;
     width: 100%;
     height: 4vw;
     overflow: hidden;
@@ -255,7 +248,7 @@ body{
     z-index: -1;
 }
 #dynamitev{
-    opacity: 64%;
+    opacity: 93%;
     width: 32%;
     position: absolute;
     top: 18vw;
@@ -273,13 +266,11 @@ body{
 #light{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 3vw;
     letter-spacing: 0.5em;
     margin-top: 24vw;
     left: 50%;
     width: 52%;
-    opacity: 79%;
     height: 4vw;
     overflow: hidden;
 }
@@ -291,9 +282,7 @@ body{
 }
 #light_1{
     position: relative;
-    color: white;
-    opacity: 79%;
-    margin-top: 5vw;
+    margin-top: 2vw;
     text-align: right;
 }
 #light_1 p{
@@ -301,44 +290,36 @@ body{
 }
 #light_2{
     position: relative;
-    color: white;
-    opacity: 79%;
     width: 38%;
     left: 50%;
-    margin-top: 5vw;
+    margin-top: 8vw;
 }
 #billion{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 3vw;
     letter-spacing: 0.5em;
     margin-top: 34vw;
     left: 59%;
     transform: translateX(-50%);
     width: 100%;
-    opacity: 79%;
 }
 #billion_1{
-    opacity: 64%;
     width: 30%;
     position: absolute;
     top: 84vw;
     left: 50%;
+    opacity: 71%;
     z-index: -1;
 }
 #billion_2{
     position: relative;
-    color: white;
-    opacity: 79%;
     width: 38%;
     left: 0%;
     margin-top: 5vw;
 }
 #billion_3{
     position: relative;
-    color: white;
-    opacity: 79%;
     width: 38%;
     left: 0%;
     margin-top: 5vw;
@@ -346,11 +327,9 @@ body{
 #about{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 5vw;
     left: 0%;
     width: 50%;
-    opacity: 79%;
 }
 #members{
     position: relative;
@@ -366,7 +345,6 @@ body{
     top: 21vw;
     font-size: 5vw;
     left: 50%; transform: translateX(-50%) rotate(90deg);
-    opacity: 77%;
 }
 #v{
     width: 27%;
@@ -475,12 +453,10 @@ p{
     word-spacing: .1vw;
     line-height: 1.2em;
     margin-top: 1vw;
-    color: white;
 }
 #playlist{
     position: relative;
     font-family: "primetime";
-    color: #F8F5F8;
     font-size: 7vw;
     margin-top: 15vw;
     left: 50%; transform: translateX(-50%);
@@ -521,7 +497,6 @@ p{
     width: 100%;
     text-align: center;
     font-family: "coachella";
-    color: white;
     position: absolute;
 
     top: 11%;
@@ -542,7 +517,6 @@ ul{
 li{
     display: inline;
     font-family: "primetime";
-    color: #F8F5F8;
     font-size: 3.3vw;
     cursor: pointer;
     left: 0vw;
@@ -558,7 +532,6 @@ li{
 #discography{
     position: relative;
     font-family: "primetime";
-    color: white;
     font-size: 4vw;
     margin-top: 34vw;
     left: 0;
