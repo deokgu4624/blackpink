@@ -110,7 +110,7 @@ background: linear-gradient(45deg, rgba(255,181,220,1) 0%, rgba(229,190,255,1) 5
     position: fixed;
     font-family: "worksans";
     letter-spacing: .1em;
-    font-size: 1.3em;
+    font-size: .8vw;
     margin: 1vw 1vw;
     cursor: pointer;
     z-index: 1;
