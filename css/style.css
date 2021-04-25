@@ -325,13 +325,6 @@ background: linear-gradient(45deg, rgba(255,181,220,1) 0%, rgba(229,190,255,1) 5
     left: 0%;
     margin-top: 5vw;
 }
-#about{
-    position: relative;
-    font-family: "primetime";
-    font-size: 5vw;
-    left: 0%;
-    width: 50%;
-}
 #members{
     position: relative;
     margin-top: 10vw;
@@ -343,18 +336,23 @@ background: linear-gradient(45deg, rgba(255,181,220,1) 0%, rgba(229,190,255,1) 5
 #members_1{
     position: absolute;
     font-family: "primetime";
+    color: #FEF3F6;
     top: 21vw;
-    font-size: 5vw;
+    font-size: 3vw;
+    letter-spacing: 0.5em;
     left: 50%; transform: translateX(-50%) rotate(90deg);
+    overflow: hidden;
+    width: 27vw;
+    height: 4vw;
+}
+#members_1 span{
+    position: absolute;
 }
 #v{
     width: 27%;
     position: absolute;
-    top: 0vw;
-    left: 13%;
-}
-#members > #v{
-    opacity: 60%;
+    top: 3vw;
+    left: 12%;
 }
 #jimin{
     width: 37%;
@@ -392,62 +390,42 @@ background: linear-gradient(45deg, rgba(255,181,220,1) 0%, rgba(229,190,255,1) 5
     top: 116vw;
     left: 14%;
 }
-#v_1{
+#v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1{
     position: absolute;
-    font-family: "primetime";
-    top: 13.2vw;
-    left: 13%;
-    font-size: 9vw;
-    color: #f5a6b9;
+    font-family: "roboto";
+    font-size: 1.2vw;
+    color: #FEF1FF;
+    transform: rotate(90deg);
+    width: 20vw;
+    text-align: left;
+}
+#v_1{
+    top: 12.5vw;
+    left: 28%;
 }
 #jimin_1{
-    position: absolute;
-    font-family: "primetime";
-    top: 35vw;
-    left: 62%;
-    font-size: 7vw;
-    color: #f5a6b9;
+    top: 20.4vw;
+    left: 88.2%;
 }
 #jungkook_1{
-    position: absolute;
-    font-family: "primetime";
-    top: 61vw;
-    left: 0%;
-    font-size: 8vw;
-    color: #f5a6b9;
-    line-height: 0.8em;
+    top: 48.5vw;
+    left: 30%;
 }
 #sugar_1{
-    position: absolute;
-    font-family: "primetime";
-    top: 79vw;
-    left: 62%;
-    font-size: 3.5vw;
-    color: #f5a6b9;
+    top: 76vw;
+    left: 71%;
 }
 #jhope_1{
-    position: absolute;
-    font-family: "primetime";
-    top: 103.7vw;
-    left: 22%;
-    font-size: 4.7vw;
-    color: #f5a6b9;
+    top: 92.5vw;
+    left: 35.2%;
 }
 #jin_1{
-    position: absolute;
-    font-family: "primetime";
     top: 106.7vw;
-    left: 64%;
-    font-size: 8.7vw;
-    color: #f5a6b9;
+    left: 76%;
 }
 #rm_1{
-    position: absolute;
-    font-family: "primetime";
-    top: 133.9vw;
-    left: 13.7%;
-    font-size: 8.5vw;
-    color: #f5a6b9;
+    top: 125.9vw;
+    left: 35%;
 }
 p{
     font-size: 1.1vw;
@@ -457,7 +435,7 @@ p{
 }
 #playlist{
     position: relative;
-    font-family: "primetime";
+    font-family: "roboto";
     font-size: 7vw;
     margin-top: 15vw;
     left: 50%; transform: translateX(-50%);
