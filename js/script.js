@@ -9,6 +9,7 @@ $(document).ready(function(){
     gsap.fromTo("#area span",{top: "+="+4.3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.7})
     gsap.to(".nav",{display: "inline", delay:1.7});
     gsap.fromTo(".nav",{opacity:0}, {opacity:1, duration:.5, delay:1.7})
+    gsap.fromTo("#btn",{opacity:0}, {opacity:1, duration:.5, delay:1.7})
 
     function time(){
         $(document).scrollTop(0);
@@ -16,6 +17,7 @@ $(document).ready(function(){
 
     $("#btn").on("click", function(){
         //메인사라짐
+        gsap.to("#btn",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#main2",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})

@@ -119,8 +119,9 @@ body{
     line-height: 1vw;
     margin: 1vw 1vw;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     display: none;
+    top: .5vw;
 }
 #logo{
     position: fixed;
@@ -128,23 +129,19 @@ body{
     transform: translate(-50%);
     top: .5vw;
     z-index: 2;
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
 }
 #nav1{
-    top: .5vw;
     left: 10vw;
 }
 #nav2{
-    top: .5vw;
     left: 28vw;
 }
 #nav3{
-    top: .5vw;
     right: 28vw;
 }
 #nav4{
-    top: .5vw;
     right: 10vw;
 }
 #mainimg{
