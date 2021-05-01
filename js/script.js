@@ -2,19 +2,19 @@ $(document).ready(function(){
     //animation
     var article = $(".article");
     gsap.to(article[0],{display: "block"});
-    gsap.fromTo("#main1",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"70%",ease:"Power3.easeOut", duration:2, delay:.1})
-    gsap.fromTo("#main2",{opacity:0, top: "+="+3+"vw"}, {top: "-="+3+"vw", opacity:"70%",ease:"Power3.easeOut", duration:2, delay:.1})
-    gsap.fromTo("#main3",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"65%",ease:"Power3.easeOut", duration:2, delay:.1})
-    gsap.fromTo("#title span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.5})
-    gsap.fromTo("#area span",{top: "+="+3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.7})
-    gsap.to(".nav",{display: "block", delay:1.7});
+    gsap.fromTo("#main1",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"65%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#main2",{opacity:0, top: "+="+3+"vw"}, {top: "-="+3+"vw", opacity:"90%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#main3",{opacity:0, top: "-="+3+"vw"}, {top: "+="+3+"vw", opacity:"90%",ease:"Power3.easeOut", duration:2, delay:.1})
+    gsap.fromTo("#title span",{top: "+="+4.3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.5})
+    gsap.fromTo("#area span",{top: "+="+4.3+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:.7})
+    gsap.to(".nav",{display: "inline", delay:1.7});
     gsap.fromTo(".nav",{opacity:0}, {opacity:1, duration:.5, delay:1.7})
 
     function time(){
         $(document).scrollTop(0);
     }
 
-    $("#nav1").on("click", function(){
+    $("#btn").on("click", function(){
         //메인사라짐
         gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#main2",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
@@ -25,20 +25,10 @@ $(document).ready(function(){
         gsap.to(article[0],{display: "none", delay:1.5});
         //다이너마이트 생김
         gsap.to(article[1],{display: "block"});
-        gsap.fromTo("#h3_1 span",{top: "+="+3+"vw", opacity:1}, {top: 0, opacity:1, ease:"Power3.easeOut", duration:2, delay:2.4})
-        gsap.fromTo("#h3_2 span",{top: "+="+3+"vw", opacity:1}, {top: 0, opacity:1, ease:"Power3.easeOut", duration:2, delay:2.6})
-        gsap.fromTo("#dynamite_1",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
-        gsap.fromTo("#dynamiterm",{opacity:0, top: 3+"vw"}, {opacity:"64%", top:6+"vw", ease:"Power3.easeOut", duration:2, delay:2})
-        gsap.fromTo("#dynamitev",{opacity:0, top: 18+"vw"}, {opacity:"73%", top:15+"vw", ease:"Power3.easeOut", duration:2, delay:2})
-        gsap.fromTo("#dynamitejin",{opacity:0, top: 50+"vw"}, {opacity:"64%", top:53+"vw", ease:"Power3.easeOut", duration:2, delay:2})
-        gsap.fromTo("#light span",{top: "+="+3.05+"vw"}, {top: 0,ease:"Power3.easeOut", duration:2, delay:2})
-        gsap.fromTo("#light_1",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
-        gsap.fromTo("#light_2",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
-        gsap.fromTo("#billion span",{top: "+="+3+"vw", opacity:1}, {top: 0, opacity:1, ease:"Power3.easeOut", duration:2, delay:2})
-        gsap.fromTo("#billion_1",{opacity:0, top: 81+"vw"}, {opacity:"64%", top:84+"vw", ease:"Power3.easeOut", duration:2, delay:2.7})
-        gsap.fromTo("#billion_2",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
-        gsap.fromTo("#billion_3",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
-        gsap.fromTo("#light_2",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:2.2})
+        gsap.fromTo("#dynamite1 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.5})
+        gsap.fromTo("#dynamite2 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.6})
+        gsap.fromTo("#dynamite3 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.7})
+        gsap.fromTo("#section2",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:1.8})
         gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
         //멤버 사라짐
         gsap.to("#members_1 span",{opacity:0 ,ease:"Power3.easeOut", duration:1, delay:.1});
@@ -64,21 +54,11 @@ $(document).ready(function(){
         gsap.fromTo(".nav",{opacity:1}, {opacity:0, duration:.5, delay:1.5});
         gsap.to(article[0],{display: "none", delay:1.5});
         //다이너마이트 사라짐
-        gsap.to("#h3_1 span", {opacity:0, ease:"Power3.easeOut", duration:1, delay:1});
-        gsap.to("#h3_2 span", {opacity:0, ease:"Power3.easeOut", duration:1, delay:1.2});
-        gsap.to("#dynamite_1", {opacity:0, ease:"Power3.easeOut", duration:1, delay:.5});
-        gsap.to("#dynamiterm",{top: "+="+3+"vw",opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
-        gsap.to("#dynamitev",{top: "-="+3+"vw",opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
-        gsap.to("#dynamitejin",{top: "+="+3+"vw",opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
-        gsap.to("#light span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5});
-        gsap.to("#light_1",{opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to("#light_2",{opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to("#billion span", {opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to("#billion_1",{top: "-="+3+"vw",opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
-        gsap.to("#billion_2",{opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to("#billion_3",{opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to("#light_2",{opacity:0, ease:"Power3.easeOut", duration:2, delay:.5});
-        gsap.to(".nav",{opacity:1}, {opacity:0, duration:.5, delay:1.5});
+        gsap.to("#dynamite1 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite2 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite3 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#section2",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to(".nav", {opacity:1, duration:.5, delay:1.5})
         gsap.to(article[1],{display: "none", delay:1.5});
         //멤버 생김
         gsap.to(article[2],{display: "block"});
