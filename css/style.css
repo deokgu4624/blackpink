@@ -76,6 +76,7 @@ body{
     -ms-overflow-style: none;
     font-family: "roboto";
     color: #FEF3F6;
+    background-color: black;
 }
 #wrapper{
     position: absolute;
@@ -87,13 +88,6 @@ body{
     display: none;
     width: 100%;
     height: 100%;
-}
-
-#background{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: black;
 }
 #article1{
     position: absolute;
@@ -265,7 +259,6 @@ body{
 }
 #section2 img{
     position: absolute;
-    opacity: 70%;
     width: 35%;
 }
 #section2img1{
@@ -335,28 +328,13 @@ body{
 #members img{
     opacity: 80%;
 }
-#members_1{
-    position: absolute;
-    font-family: "primetime";
-    color: #FEF3F6;
-    top: 21vw;
-    font-size: 3vw;
-    letter-spacing: 0.5em;
-    left: 50%; transform: translateX(-50%) rotate(90deg);
-    overflow: hidden;
-    width: 27vw;
-    height: 4vw;
-}
-#members_1 span{
-    position: absolute;
-}
 #v{
     width: 27%;
     position: absolute;
     top: 3vw;
     left: 12%;
 }
-#jimin{
+#jin{
     width: 37%;
     position: absolute;
     top: 11vw;
@@ -380,7 +358,7 @@ body{
     top: 83vw;
     left: 22%;
 }
-#jin{
+#jimin{
     width: 23%;
     position: absolute;
     top: 97vw;
@@ -394,40 +372,89 @@ body{
 }
 #v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1{
     position: absolute;
-    font-family: "roboto";
-    font-size: 1.2vw;
+    font-family: "robotoitalic";
     color: #FEF1FF;
-    transform: rotate(90deg);
-    width: 20vw;
+    width: 41vw;
     text-align: left;
+    overflow: hidden;
 }
 #v_1{
-    top: 12.5vw;
-    left: 28%;
+    top: 26vw;
+    left: 11%;
+    height: 5vw;
+    font-size: 4vw;
 }
-#jimin_1{
-    top: 20.4vw;
-    left: 88.2%;
-}
-#jungkook_1{
-    top: 48.5vw;
-    left: 30%;
-}
-#sugar_1{
-    top: 76vw;
-    left: 71%;
-}
-#jhope_1{
-    top: 92.5vw;
-    left: 35.2%;
+#v_1 span{
+    position: absolute;
+    top: 0vw;
 }
 #jin_1{
-    top: 106.7vw;
-    left: 76%;
+    top: 50vw;
+    left: 60%;
+    font-size: 7vw;
+}
+#jungkook_1{
+    top: 73vw;
+    left: 4%;
+    font-size: 6vw;
+}
+#sugar_1{
+    top: 90vw;
+    left: 61%;
+    font-size: 5vw;
+}
+#jhope_1{
+    top: 112vw;
+    left: 17%;
+    font-size: 4vw;
+}
+#jimin_1{
+    top: 126vw;
+    left: 61%;
+    font-size: 5vw;
 }
 #rm_1{
-    top: 125.9vw;
-    left: 35%;
+    top: 153vw;
+    left: 10%;
+    font-size: 6vw;
+}
+.square{
+    position: absolute;
+    background: rgb(78,219,255);
+    background: linear-gradient(135deg, rgba(78,219,255,1) 0%, rgba(0,255,85,1) 100%);
+    z-index: -1;
+    display: none;
+    opacity: 0;
+}
+#square1{
+    width: 37%;
+    padding-bottom: 37%;
+    top: 21vw;
+    left: 56vw;
+}
+#square2{
+    width: 24%;
+    padding-bottom: 24%;
+    top: 93vw;
+    left: 21vw;
+}
+#line{
+    width: 1px;
+    height: 5vw;
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+#line2{
+    width: 1px;
+    height: 5vw;
+    background-color: white;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -1.78vw;
+    left: 4.2vw;
 }
 p{
     word-spacing: .1vw;
