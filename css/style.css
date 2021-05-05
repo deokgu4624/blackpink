@@ -44,14 +44,6 @@ fieldset{border:none}
     src: url(../fonts/Roboto-Thin.ttf);
 }
 @font-face{
-    font-family: "coachella";
-    src: url(../fonts/MADE\ Coachella\ Light\ PERSONAL\ USE.otf);
-}
-@font-face{
-    font-family: "primetime";
-    src: url(../fonts/PRIMETIME\ _PERSONAL\ USE\ ONLY.ttf);
-}
-@font-face{
     font-family: "robotolight";
     src: url(../fonts/Roboto-Light.ttf);
 }
@@ -196,7 +188,6 @@ body{
     left: 50%; transform: translateX(-50%);
 }
 #btn{
-    background: rgb(78,219,255);
     background: linear-gradient(45deg, rgba(78,219,255,1) 0%, rgba(51,249,37,1) 100%);
     width: 9vw;
     height: 2vw;
@@ -207,7 +198,20 @@ body{
     z-index: 1;
     text-align: center;
     font-size: 1vw;
-    line-height: 100px 0;
+    cursor: pointer;
+    font-family: "robotolight";
+}
+#btn2{
+    background: linear-gradient(45deg, rgba(78,219,255,1) 0%, rgba(51,249,37,1) 100%);
+    width: 9vw;
+    height: 2vw;
+    position: absolute;
+    border-radius: 1vw 1vw 1vw 1vw;
+    left: 50%; transform: translateX(-50%);
+    top: 27vw;
+    z-index: 1;
+    text-align: center;
+    font-size: 1vw;
     cursor: pointer;
     font-family: "robotolight";
 }
@@ -216,6 +220,32 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+#btn2 span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+#mouse{
+    position: absolute;
+    width: 2vw;
+    height: 4vw;
+    border-radius: 10vw;
+    border: white .1vw solid;
+    top: 26vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#wheel{
+    position: absolute;
+    width: .8vw;
+    height: .8vw;
+    background-color: white;
+    border-radius: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #section1 ,#section2{
     position: relative;
@@ -233,7 +263,7 @@ body{
     position: relative;
     overflow: hidden;
 }
-#section1 span{
+#dynamite1 span, #dynamite2 span, #dynamite3 span{
     font-size: 5.9vw;
     position: absolute;
 }
@@ -301,6 +331,7 @@ body{
 }
 #section2 p{
     position: absolute;
+    font-family: "roboto";
     margin-top: 28vw;
     font-size: 1.2vw;
     line-height: 1.3em;
@@ -418,7 +449,48 @@ body{
     left: 10%;
     font-size: 6vw;
 }
-.square{
+#members p{
+    font-family: "roboto";
+    font-size: 1.3vw;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+#p1{
+    position: absolute;
+    top: 5.8vw;
+    left: 31.3vw;
+}
+#p2{
+    position: absolute;
+    top: 21.8vw;
+    right: -3.7vw;
+}
+#p3{
+    position: absolute;
+    top: 41.9vw;
+    left: 33vw;
+}
+#p4{
+    position: absolute;
+    top: 76.8vw;
+    right: 11.3vw;
+}
+#p5{
+    position: absolute;
+    top: 94.8vw;
+    left: 37.3vw;
+}
+#p6{
+    position: absolute;
+    top: 110vw;
+    right: 6.9vw;
+}
+#p7{
+    position: absolute;
+    top: 127.8vw;
+    left: 37.3vw;
+}
+/* .square{
     position: absolute;
     background: rgb(78,219,255);
     background: linear-gradient(135deg, rgba(78,219,255,1) 0%, rgba(0,255,85,1) 100%);
@@ -437,35 +509,14 @@ body{
     padding-bottom: 24%;
     top: 93vw;
     left: 21vw;
-}
-#line{
-    width: 1px;
-    height: 5vw;
-    background-color: white;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 0vw;
-    left: 0vw;
-}
-#line2{
-    width: 1px;
-    height: 5vw;
-    background-color: white;
-    transform: rotate(90deg);
-    position: absolute;
-    top: -1.78vw;
-    left: 4.2vw;
-}
-p{
-    word-spacing: .1vw;
-    font-family: "roboto";
-}
+} */
 #playlist{
     position: relative;
-    font-family: "roboto";
+    font-family: "robotolight";
     font-size: 7vw;
     margin-top: 15vw;
-    left: 50%; transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 0;
 }
 #playlist_1{
@@ -522,12 +573,11 @@ ul{
 }
 li{
     display: inline;
-    font-family: "primetime";
-    font-size: 3.3vw;
+    font-size: 2vw;
     cursor: pointer;
-    left: 0vw;
     position: absolute;
     z-index: 1;
+    font-family: 'robotolight';
 }
 #li1{width:25.5vw;top:33vw}#li2{width:38.5vw;top:38vw}#li3{width:20.5vw;top:43vw}#li4{width:36.5vw;top:48vw}#li5{width:22vw;top:33vw;left:50%}#li6{width:29vw;top:38vw;left:50%}#li7{width:23vw;top:43vw;left:50%}#li8{width:37vw;top:48vw;left:50%}
 #playbtn{
@@ -535,32 +585,19 @@ li{
 }
 .play{position:absolute;width:2vw}#play1{top:34.3vw;left:21vw}#play2{top:39.3vw;left:30vw;}#play3{top:44.6vw;left:10vw}#play4{top:49.3vw;left:28.5vw}#play5{top:34.3vw;left:73.5vw}#play6{top:39.3vw;left:66vw}#play7{top:44.4vw;left:63.5vw}#play8{top:49.3vw;left:74.5vw}.pause{position:absolute;width:2vw}#pause1{top:34.3vw;left:21vw}#pause2{top:39.3vw;left:30vw;}#pause3{top:44.6vw;left:10vw}#pause4{top:49.3vw;left:28.5vw}#pause5{top:34.3vw;left:73.5vw}#pause6{top:39.3vw;left:66vw}#pause7{top:44.4vw;left:63.5vw}#pause8{top:49.3vw;left:74.5vw}
 
-#discography{
-    position: relative;
-    font-family: "primetime";
-    font-size: 4vw;
-    margin-top: 34vw;
-    left: 0;
-}
-#disclist{
-    position: relative;
-    font-family: "primetime";
-    color: #f5a6b9;
-    font-size: 10vw;
-    left: 0;
-}
 #cardwrapper{
     position: relative;
-    width: 89%;
-    height: 200vw;
-    left: 50%; transform: translateX(-50%);
+    width: 77%;
+    height: 186vw;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 9vw;
 }
 .photocard{
     width: 30%;
-    height: 52vw;
+    height: 39vw;
+    opacity: 0;
     position: absolute;
-    opacity: 76%;
 }
 .photo{
     width: 100%;
@@ -580,157 +617,105 @@ li{
     left: 70%;
 }
 #photocard4{
-    top: 51vw;
+    top: 39vw;
     left: 0%;
 }
 #photocard5{
-    top: 71vw;
+    top: 62vw;
     left: 35%;
 }
 #photocard6{
-    top: 55vw;
+    top: 42vw;
     left: 70%;
 }
 #photocard7{
-    top: 94vw;
+    top: 78vw;
     left: 0%;
 }
 #photocard8{
-    top: 119vw;
+    top: 100vw;
     left: 35%;
 }
 #photocard9{
-    top: 160vw;
+    top: 139vw;
     left: 35%;
 }
 #photocard10{
-    top: 137vw;
+    top: 113vw;
     left: 0%;
 }
 #photocard11{
-    top: 141vw;
+    top: 121vw;
     left: 70%;
 }
 #photocard12{
-    top: 98vw;
+    top: 80vw;
     left: 70%;
 }
-#name1{
+.name{
     position: absolute;
-    font-family: "primetime";
-    color: white;
+    font-family: "robotolight";
+    transform: rotate(90deg);
+    width: 61vw;
+}
+#name1{
     font-size: 4.5vw;
     top: 28vw;
     left: -28.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
 }
 #name2{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 6vw;
     top: 27vw;
-    left: -27.6vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    left: -28.2vw;
 }
 #name3{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 4.5vw;
     top: 28vw;
     left: -28.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
 }
 #name4{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     top: 29vw;
-    left: -8.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    left: -29vw;
 }
 #name5{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 6vw;
-    top: -11vw;
-    left: -10.3vw;
-    transform: rotate(-90deg);
-    width: 61vw;
+    top: 27vw;
+    left: -27.3vw;
 }
 #name6{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 6.5vw;
     top: 26vw;
-    left: -27.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    left: -28.3vw;
 }
 #name7{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 7.5vw;
-    top: -2vw;
-    left: 12.4vw;
-    width: 61vw;
+    top: 26vw;
+    left: -27.6vw;
 }
 #name8{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 5.7vw;
     top: 27vw;
-    left: -27.7vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    left: -28.3vw;
 }
 #name9{
-    position: absolute;
-    font-family: "notosans";
-    color: white;
     font-size: 4.5vw;
-    top: 28vw;
-    left: -28.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    top: 12vw;
+    left: -12vw;
+    width: 29vw;
 }
 #name10{
-    position: absolute;
-    font-family: "notosans";
-    color: white;
     font-size: 4.5vw;
     top: 28vw;
-    left: -28.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
+    left: -28vw;
 }
 #name11{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
     font-size: 5.5vw;
     top: 27vw;
     left: -27.8vw;
-    transform: rotate(90deg);
-    width: 61vw;
 }
 #name12{
-    position: absolute;
-    font-family: "primetime";
-    color: white;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     top: 28vw;
     left: -28.3vw;
-    transform: rotate(90deg);
-    width: 61vw;
 }

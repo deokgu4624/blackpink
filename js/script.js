@@ -16,7 +16,7 @@ $(document).ready(function(){
     }
         
         
-    $("#btn").on("click", function(){
+    $("#btn, #nav1").on("click", function(){
         //메인사라짐
         gsap.to("#btn",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
@@ -24,17 +24,19 @@ $(document).ready(function(){
         gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#title span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
         gsap.to("#area span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.7})
-        gsap.fromTo(".nav",{opacity:1}, {opacity:0, duration:.5, delay:1.5})
         gsap.to(article[0],{display: "none", delay:1.5});
-        //다이너마이트 생김
+        //어바웃 생김
         gsap.to(article[1],{display: "block"});
-        gsap.fromTo("#dynamite1 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.5})
-        gsap.fromTo("#dynamite2 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.6})
-        gsap.fromTo("#dynamite3 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.7})
+        gsap.fromTo("#dynamite1 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:1.9})
+        gsap.fromTo("#dynamite2 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:2})
+        gsap.fromTo("#dynamite3 span",{top: "+="+7+"vw",opacity:1}, {top: 0,opacity:1,ease:"Power3.easeOut", duration:2, delay:2.1})
         gsap.fromTo("#section2",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:1.8})
-        gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
+        gsap.fromTo("#section1img1",{scale:.8, opacity:0}, {scale:1, opacity:1, ease:"Power3.easeOut", duration:2, delay:1.5})
+        gsap.fromTo("#section1img2",{scale:.8, opacity:0}, {scale:1, opacity:1, ease:"Power3.easeOut", duration:2, delay:1.5})
+        gsap.fromTo("#section1img3",{scale:.8, opacity:0}, {scale:1, opacity:1, ease:"Power3.easeOut", duration:2, delay:1.5})
+        gsap.fromTo("#mouse",{opacity:0}, {opacity:1, ease:"Power3.easeOut", duration:2, delay:1.8})
+        gsap.fromTo("#wheel",{top:.2+"vw", opacity:1}, {top:2+"vw", opacity:0, duration:2, ease:"Power3.easeOut", repeat:-1})
         //멤버 사라짐
-        gsap.to("#members_1 span",{opacity:0 ,ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#v",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#jimin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#jungkook",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
@@ -43,9 +45,28 @@ $(document).ready(function(){
         gsap.to("#jin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#rm",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1", {opacity:0, ease:"Power3.easeOut", duration:2, delay:.1});
-        gsap.to(".nav", {opacity:0, duration:.5, delay:1.5});
         gsap.to(article[2],{display: "none", delay:1.5});
         setTimeout(time, 1500);
+        gsap.to("#members p", {opacity:0, duration:.5, delay:.1});
+        //
+        gsap.to(article[3],{display: "none", delay:1.5});
+        //디스코그래피 사라짐
+        gsap.to(article[4],{display: "none", delay:1.5});
+        gsap.to("#photocard1",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard2",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard3",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard4",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard5",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard6",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard7",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard8",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard9",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard10",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard11",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard12",{opacity:0, duration:1, delay:.1});
+        //nav
+        gsap.to(".nav", {opacity:0, duration:.5, delay:1.5});
+        gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
     });
     $("#nav2").on("click", function(){
         //메인사라짐
@@ -55,14 +76,16 @@ $(document).ready(function(){
         gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
         gsap.to("#title span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5});
         gsap.to("#area span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.7});
-        gsap.fromTo(".nav",{opacity:1}, {opacity:0, duration:.5, delay:1.5});
         gsap.to(article[0],{display: "none", delay:1.5});
-        //다이너마이트 사라짐
+        //어바웃 사라짐
         gsap.to("#dynamite1 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#dynamite2 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#dynamite3 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
         gsap.to("#section2",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
-        gsap.to(".nav", {opacity:1, duration:.5, delay:1.5})
+        gsap.to("#section1img1", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img2", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img3", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#mouse",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
         gsap.to(article[1],{display: "none", delay:1.5});
         //멤버 생김
         gsap.to(article[2],{display: "block"});
@@ -75,10 +98,132 @@ $(document).ready(function(){
         gsap.fromTo("#rm",{top: 125+"vw", opacity:0, scale:0.8}, {top: 125+"vw", opacity:1, scale:1, ease:"Power3.easeOut", duration:2, delay:2});
         gsap.to("#v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1", {opacity:1, ease:"Power3.easeOut", duration:2, delay:.1});
         gsap.fromTo("#v_1 span", {top: "+="+5.1+"vw",opacity:1}, {top: 0,opacity:1, ease:"Power3.easeOut", duration:2, delay:2.4});
-        gsap.to(".square",{display: "block", delay:3.5});
-        gsap.to(".square",{opacity:1, delay:3.5});
-        gsap.to(".nav", {opacity:1, duration:.5, delay:3});
+        gsap.to("#members p", {opacity:1, duration:.5, delay:3});
         setTimeout(time, 1500);
+        //
+        gsap.to(article[3],{display: "none", delay:1.5});
+         //디스코그래피 사라짐
+         gsap.to(article[4],{display: "none", delay:1.5});
+        gsap.to("#photocard1",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard2",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard3",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard4",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard5",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard6",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard7",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard8",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard9",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard10",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard11",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard12",{opacity:0, duration:1, delay:.1});
+        //nav
+        gsap.to(".nav", {opacity:0, duration:.5, delay:1.5});
+        gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
+    });
+    
+    $("#nav3").on("click", function(){
+        //메인사라짐
+        gsap.to("#btn",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#main2",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#title span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5});
+        gsap.to("#area span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.7});
+        gsap.to(article[0],{display: "none", delay:1.5});
+        //어바웃 사라짐
+        gsap.to("#dynamite1 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite2 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite3 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#section2",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#section1img1", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img2", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img3", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#mouse",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to(article[1],{display: "none", delay:1.5});
+        //멤버 사라짐
+        gsap.to("#v",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jimin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jungkook",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#sugar",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jhope",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#rm",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1", {opacity:0, ease:"Power3.easeOut", duration:2, delay:.1});
+        gsap.to(article[2],{display: "none", delay:1.5});
+        setTimeout(time, 1500);
+        gsap.to("#members p", {opacity:0, duration:.5, delay:.1});
+        //
+        gsap.to(article[3],{display: "block"});
+
+         //디스코그래피 사라짐
+        gsap.to(article[4],{display: "none", delay:1.5});
+        gsap.to("#photocard1",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard2",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard3",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard4",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard5",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard6",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard7",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard8",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard9",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard10",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard11",{opacity:0, duration:1, delay:.1});
+        gsap.to("#photocard12",{opacity:0, duration:1, delay:.1});
+        //nav
+        gsap.to(".nav", {opacity:0, duration:.5, delay:1.5});
+        gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
+    });
+
+    $("#nav4").on("click", function(){
+        //메인사라짐
+        gsap.to("#btn",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#main1",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#main2",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#main3",{top: "+="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#title span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5});
+        gsap.to("#area span",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.7});
+        gsap.to(article[0],{display: "none", delay:1.5});
+        //어바웃 사라짐
+        gsap.to("#dynamite1 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite2 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#dynamite3 span",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#section2",{opacity:0,ease:"Power3.easeOut", duration:1, delay:.1})
+        gsap.to("#section1img1", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img2", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#section1img3", {top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to("#mouse",{opacity:0, ease:"Power3.easeOut", duration:1, delay:.5})
+        gsap.to(article[1],{display: "none", delay:1.5});
+        //멤버 사라짐
+        gsap.to("#v",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jimin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jungkook",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#sugar",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jhope",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#jin",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#rm",{top: "-="+3+"vw", opacity:0, ease:"Power3.easeOut", duration:1, delay:.1});
+        gsap.to("#v_1, #jimin_1, #jungkook_1, #sugar_1, #jhope_1, #jin_1, #rm_1", {opacity:0, ease:"Power3.easeOut", duration:2, delay:.1});
+        gsap.to(article[2],{display: "none", delay:1.5});
+        setTimeout(time, 1500);
+        gsap.to("#members p", {opacity:0, duration:.5, delay:.1});
+        //
+        gsap.to(article[3],{display: "none", delay:1.5});
+        //디스코그래피 생김
+        gsap.to(article[4],{display: "block"});
+        gsap.to("#photocard1",{opacity:1, duration:2, delay:2});
+        gsap.to("#photocard2",{opacity:1, duration:2, delay:2.1});
+        gsap.to("#photocard3",{opacity:1, duration:2, delay:2.2});
+        gsap.to("#photocard4",{opacity:1, duration:2, delay:2.3});
+        gsap.to("#photocard5",{opacity:1, duration:2, delay:2.4});
+        gsap.to("#photocard6",{opacity:1, duration:2, delay:2.5});
+        gsap.to("#photocard7",{opacity:1, duration:2, delay:2.6});
+        gsap.to("#photocard8",{opacity:1, duration:2, delay:2.7});
+        gsap.to("#photocard9",{opacity:1, duration:2, delay:2.8});
+        gsap.to("#photocard10",{opacity:1, duration:2, delay:2.9});
+        gsap.to("#photocard11",{opacity:1, duration:2, delay:3});
+        gsap.to("#photocard12",{opacity:1, duration:2, delay:3.1});
+        //nav
+        gsap.to(".nav", {opacity:0, duration:.5, delay:1.5});
+        gsap.to(".nav", {opacity:1, duration:.5, delay:3.7})
     });
     //rollig lp
     var rolling = gsap.to("#albumbox",{rotation:"360deg", ease:"none", duration: 2, repeat: -1});
